@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Stat() {
+function Stat({stat}) {
   return (
     <div className="stat">
-         <h2>12K</h2>
+         <h2>{stat}</h2>
+         <p>User's</p>
     </div>
   )
 }

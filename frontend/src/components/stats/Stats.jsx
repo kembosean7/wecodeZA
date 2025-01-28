@@ -11,10 +11,10 @@ function Stats() {
         </p>
 
         <div className="statsContainer">
-            {<Stat />}
-            {<Stat />}
-            {<Stat />}
-            {<Stat />}
+            {<Stat stat={"12K"} />}
+            {<Stat stat={"50"} />}
+            {<Stat stat={"30"}/>}
+            {<Stat stat={90}/>}
         </div>
     </article>
   )

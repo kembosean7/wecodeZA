@@ -10,6 +10,33 @@
         grid-template-rows: repeat(5, 1fr);
     }
     /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 800px) {
+        .heroContainer{
+            height: 70vh;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .heroContainer{
+            height: 70vh;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .heroContainer{
+            height: 70vh;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .heroContainer{
+            height: 50vh;
+            width: 100%;
+        }
+    }
 /*  */
 
 
@@ -67,6 +94,89 @@
         font-weight: 400;
     }
     /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 900px)
+    {
+        /* >> Hero Intro << */
+        .heroIntro h1{
+            font-size: 5rem;
+        }
+
+        .heroIntro p{
+            font-size: 30px;
+        }
+    }
+    
+    @media screen and (max-width: 800px)
+    {
+        /* >> Hero Intro << */
+        .heroIntro h1{
+            font-size: 4rem;
+        }
+
+        .heroIntro p{
+            font-size: 20px;
+        }
+    }
+    
+    @media screen and (max-width: 700px)
+    {
+        /* >> Hero Intro << */
+        .heroIntro h1{
+            font-size: 4rem;
+        }
+
+        .heroIntro p{
+            font-size: 20px;
+        }
+    }
+    
+    @media screen and (max-width: 700px)
+    {
+        /* >> Hero Intro << */
+        .heroIntro h1{
+            font-size: 4rem;
+        }
+
+        .heroIntro p{
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 600px)
+    {
+        /* >> Hero Intro << */
+        .heroIntro h1{
+            font-size: 4rem;
+        }
+
+        .heroIntro p{
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 550px)
+    {
+        /* >> Hero Intro << */
+        .heroIntro h1{
+            font-size: 3rem;
+        }
+
+        .heroIntro p{
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        /* >> Hero Intro << */
+        .heroIntro h1{
+            font-size: 2rem;
+        }
+
+        .heroIntro p{
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
 /*  */
 
 
@@ -84,4 +194,39 @@
         background-size: 350px;
     }
     /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 900px) {
+        .leftSection {
+            background-size: 650px
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .leftSection {
+            background-size: 650px
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .leftSection {
+            background-size: 650px
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .leftSection {
+            background-size: 500px
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .leftSection {
+            background-size: 450px
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .leftSection{
+            background-size: 350px
+        }
+    }
 /*  */
