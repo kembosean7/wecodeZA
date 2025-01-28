@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bahianita&family=Belanosima:wght@400;600;700&family=Smooch+Sans:wght@100..900&display=swap');
+
+/* >>>>> FEATURE CONTAINER <<<<< */
+    .featureContainer{
+        height: 15rem;
+        width: 15rem;
+        padding: 20px;
+
+        background-color: #fff9f0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        font-family: "Smooch Sans", serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    .featureContainer h1{
+        font-size: 4rem;
+        font-weight: bolder;
+    }
+
+    .featureContainer h2{
+        font-weight: bold;
+    }
+
+    .featureContainer p{
+        font-weight: 500
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Bahianita&family=Belanosima:wght@400;600;700&family=Smooch+Sans:wght@100..900&display=swap');
+
+/* >>>>> HERO CONTAINER <<<<< */
+    .heroContainer{
+        height: 50vh;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */
+
+
+/* >>>>> RIGHT SECTION <<<<< */
+    .rightSection{
+        padding: 16px;
+        grid-row-start: 1;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        z-index: 1;
+        background-color: transparent;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .toLogin{
+        height: 50px;
+        width: 100px;
+        padding: 8px;
+        
+        border: none;
+        outline: none;
+        background-color: #7094d1;
+
+        font-size: 18px;
+        font-family: "Smooch Sans", serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+
+        display: grid;
+        place-content: center;
+    }
+
+    /* >>> Hero Intro <<< */
+    .heroIntro{
+        font-family: "Smooch Sans", serif;
+        font-optical-sizing: auto;
+        /* font-weight: bolder; */
+        font-style: normal;
+    }
+
+    .heroIntro h1{
+        font-weight: bolder;
+        font-size: 2rem;
+    }
+
+    .heroIntro p{
+        font-size: 18px;
+        font-weight: 400;
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */
+
+
+/* >>>>> LEFT SECTION <<<<< */
+    .leftSection{
+        grid-row-start: 1;
+        grid-row-end: 6;
+        grid-column-start: 3;
+        grid-column-end: 6;
+        background-color: #7094d1;
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */
