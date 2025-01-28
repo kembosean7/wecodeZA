@@ -12,6 +12,9 @@ function Stats() {
 
         <div className="statsContainer">
             {<Stat />}
+            {<Stat />}
+            {<Stat />}
+            {<Stat />}
         </div>
     </article>
   )

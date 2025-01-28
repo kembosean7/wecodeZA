@@ -37,7 +37,7 @@
         
         border: none;
         outline: none;
-        background-color: #7094d1;
+        background-color: #1746f0c9;
 
         font-size: 18px;
         font-family: "Smooch Sans", serif;
@@ -76,7 +76,12 @@
         grid-row-end: 6;
         grid-column-start: 3;
         grid-column-end: 6;
-        background-color: #7094d1;
+        /* background-color: #7094d1; */
+
+        background-image: url('./background.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 350px;
     }
     /* >>> RESPONSIVE <<< */
 /*  */

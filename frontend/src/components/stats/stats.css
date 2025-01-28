@@ -34,6 +34,10 @@
 /* >>>>> STATS CONTAINER <<<<< */
     .statsContainer{
         margin-top: 30px;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-evenly;
     }
     /* >>> RESPONSIVE <<< */
 /*  */
