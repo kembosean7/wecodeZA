@@ -10,6 +10,19 @@
         grid-template-rows: repeat(5, 1fr);
     }
     /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1400px) {
+        .heroContainer{
+            height: 70vh;
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .heroContainer{
+            height: 70vh;
+            width: 100%;
+        }
+    }
+
     @media screen and (max-width: 800px) {
         .heroContainer{
             height: 70vh;
@@ -94,6 +107,43 @@
         font-weight: 400;
     }
     /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1400px)
+    {
+        .rightSection{}
+        /* >> Hero Intro << */
+        .heroIntro h1{
+            font-size: 5rem;
+        }
+
+        .heroIntro p{
+            font-size: 30px;
+        }
+    }
+    
+    @media screen and (max-width: 1200px)
+    {
+        /* >> Hero Intro << */
+        .heroIntro h1{
+            font-size: 5rem;
+        }
+
+        .heroIntro p{
+            font-size: 30px;
+        }
+    }
+    
+    @media screen and (max-width: 1000px)
+    {
+        /* >> Hero Intro << */
+        .heroIntro h1{
+            font-size: 5rem;
+        }
+
+        .heroIntro p{
+            font-size: 30px;
+        }
+    }
+    
     @media screen and (max-width: 900px)
     {
         /* >> Hero Intro << */
@@ -194,6 +244,24 @@
         background-size: 350px;
     }
     /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1400px) {
+        .leftSection {
+            background-size: 750px
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .leftSection {
+            background-size: 750px
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        .leftSection {
+            background-size: 650px
+        }
+    }
+
     @media screen and (max-width: 900px) {
         .leftSection {
             background-size: 650px
