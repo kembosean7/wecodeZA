@@ -4,11 +4,13 @@ import Header from './components/header/Header'
 import "./style.css"
 import Hero from './components/hero/Hero'
 import About from './components/about/About'
+import Stats from './components/stats/Stats'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Header />
     <Hero />
     <About />
+    <Stats />
   </StrictMode>,
 )

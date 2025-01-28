@@ -45,6 +45,7 @@
         width: 100%;
 
         display: grid;
+        flex-direction: row;
         place-content: center;
     }
     /* >>> RESPONSIVE <<< */
