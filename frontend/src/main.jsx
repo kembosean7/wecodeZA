@@ -6,13 +6,10 @@ import Hero from './components/hero/Hero'
 import About from './components/about/About'
 import Stats from './components/stats/Stats'
 import Footer from './components/footer/Footer';
+import FeedHeader from './components/feedHeader/FeedHeader'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Header />
-    <Hero />
-    <About />
-    <Stats />
-    <Footer />
+    <FeedHeader />
   </StrictMode>,
 )

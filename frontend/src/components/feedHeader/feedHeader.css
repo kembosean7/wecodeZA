@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Bahianita&family=Belanosima:wght@400;600;700&family=Smooch+Sans:wght@100..900&display=swap');
+
+
+/* >>>>> FEED HEADER CONTAINER <<<<< */
+    .feedHeader{
+        width: 100%;
+        height: 75px;
+        padding: 30px;
+
+        border-bottom: 1px solid rgba(128, 128, 128, 0.219);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        font-size: 18px;
+        font-family: "Smooch Sans", serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    .feedHeader h2{
+        font-size: 2rem;
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */
+
+
+/* >>>>> ACCOUNT NAVIGATION SECTION <<<<< */
+
+    /* >>> RESPONSIVE <<< */
+/*  */
