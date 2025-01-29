@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Bahianita&family=Belanosima:wght@400;600;700&family=Smooch+Sans:wght@100..900&display=swap');
+
+/* >>>>> FOLLOW CONTAINER <<<<< */
+    .followContainer{
+        height: 100px;
+        width: 100%;
+        padding: 18px;
+
+        border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .followContainer button{
+        height: 40px;
+        width: 90px;
+
+        background-color: transparent;
+        outline: none;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */
+
+
+/* >>>>> FOLLOW INFO SECTION <<<<< */
+    .followContainer h2 {
+        margin: initial;
+
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .followContainer p {
+        font-size: 18px;
+        font-family: "Smooch Sans", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */

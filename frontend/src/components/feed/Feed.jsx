@@ -3,6 +3,7 @@ import "./feed.css"
 import Post from '../post/FeedPost'
 import { CiSearch } from "react-icons/ci";
 import FeedPost from '../post/FeedPost';
+import Follow from '../follow/Follow';
 
 function Feed() {
   return (
@@ -44,7 +45,18 @@ function Feed() {
         </section>
 
         <section className="rightFeed">
+          <h2>People you might be intrested in:</h2>
 
+          <div className="feedFollows">
+            <Follow />
+            <Follow />
+            <Follow />
+            <Follow />
+            <Follow />
+            <Follow />
+            <Follow />
+            <Follow />
+          </div>
         </section>
     </main>
   )
