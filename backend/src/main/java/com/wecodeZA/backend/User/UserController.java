@@ -1,5 +1,6 @@
 package com.wecodeZA.backend.User;
 
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,6 +31,7 @@ public class UserController {
     public void deleteUser(@PathVariable("id") Long id){
         useService.deleteUser(id);
     }
+
 
 
 }
