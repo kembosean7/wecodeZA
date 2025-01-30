@@ -1,4 +1,4 @@
-package com.wecodeZA.backend;
+package com.wecodeZA.backend.User;
 
 
 //import jakarta.persistence.Entity;
