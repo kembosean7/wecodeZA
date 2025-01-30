@@ -1,27 +1,24 @@
 package com.wecodeZA.backend.User;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class UserService {
-    public List<UserEntity> getUsers() {
-        return List.of(
-                new UserEntity(
-                        1L,
-                        "sekembojhb024@student.wethinkcode",
-                        "Kembo",
-                        "Sean"
-                ),
-                new UserEntity(
-                        2L,
-                        "jclaudhjbh024@student.wethinkcode",
-                        "Kumm",
-                        "Jean-Claud"
-                )
 
-        );
+    @Autowired
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    private  final UserRepository userRepository;
+
+    public List<UserEntity> getUsers() {
+        return  userRepository.findAll();
+
+
 
 
     }
