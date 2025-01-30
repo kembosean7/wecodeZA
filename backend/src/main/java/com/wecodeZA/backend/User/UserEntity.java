@@ -16,6 +16,9 @@ public class UserEntity {
     private Long id;
     private String name;
     private String lastname;
+    private String username;
+
+
     private String email;
 
 
@@ -23,17 +26,19 @@ public class UserEntity {
 
     }
 
-    public UserEntity(Long id, String email, String lastname, String name) {
+    public UserEntity(Long id, String email, String lastname,String username, String name) {
         this.id = id;
         this.email = email;
         this.lastname = lastname;
         this.name = name;
+        this.username = username;
     }
 
-    public UserEntity(String name, String lastname, String email) {
+    public UserEntity(String name, String lastname, String username, String email) {
         this.name = name;
         this.lastname = lastname;
         this.email = email;
+        this.username = username;
     }
 
     public Long getId() {
@@ -70,6 +75,14 @@ public class UserEntity {
     }
 
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
 
     @Override
     public String toString() {
@@ -77,6 +90,7 @@ public class UserEntity {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", lastname='" + lastname + '\'' +
+                ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }
