@@ -41,13 +41,15 @@ public class UserService {
     }
 
     @Transactional
-    public void updateUser(Long id, String name, String email, String username) {
+    public void updateUser(Long id, String name, String lastname, String email, String username) {
         User user = userRepository.findById(id).orElseThrow(() -> new IllegalStateException("Account with ID: " + id + " does not exist"));
 
         if (name != null && !name.isEmpty() && !Objects.equals(user.getName(), name)){
-            user.setName(name);
+            user.setName(name.trim());
         }
-
+        if (lastname != null && !lastname.isEmpty() && !Objects.equals(user.getLastname(), lastname)){
+            user.setLastname(lastname);
+        }
 
         if (email != null && !email.isEmpty() && !Objects.equals(user.getEmail(), email)){
             Optional<User> accountOptional = userRepository.findUserByEmail(email);
