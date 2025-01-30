@@ -3,162 +3,170 @@
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap');
 
 /* >>>>> FEED CONTAINER <<<<< */
-    .feedContainer{
-        width: 100%;
-        height: 90vh;
+.feedContainer {
+    width: 100%;
+    height: 90vh;
 
-        display: flex;
-    }
-    /* >>> RESPONSIVE <<< */
+    display: flex;
+}
+
+/* >>> RESPONSIVE <<< */
 /*  */
 
 
 /* >>>>> LEFT FEED SECTION <<<<< */
-    .leftFeed{
-        width: 70%;
-        height: 100%;
+.leftFeed {
+    width: 70%;
+    height: 100%;
 
-        border-right: 2px solid rgba(128, 128, 128, 0.219);
+    border-right: 2px solid rgba(128, 128, 128, 0.219);
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    /* >>> RESPONSIVE <<< */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* >>> RESPONSIVE <<< */
 /*  */
 
 
 /* >>>>> TOP FEED HEADER SECTION <<<<< */
-    .feedTopHeader{
-        height: 150px;
-        width: 90%;
-        padding: 20px;
+.feedTopHeader {
+    height: 150px;
+    width: 90%;
+    padding: 20px;
 
-        border-bottom: 2px solid rgba(128, 128, 128, 0.219);
+    border-bottom: 2px solid rgba(128, 128, 128, 0.219);
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 2rem;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
 
-    .feedContainer input{
-        display: block;
-        border: none;
-        outline: none;
+.feedContainer input {
+    display: block;
+    border: none;
+    outline: none;
 
-        height: 40px;
-        width: 200px;
+    height: 40px;
+    width: 200px;
 
-        border-bottom: 2px solid black;
-        border-top: 2px solid black;
-        border-right: 2px solid black;
-        
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
 
-        font-family: "Ysabeau Infant", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-    }
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 
-    .head{
-        font-size: 2rem;
-        font-family: "Smooch Sans", serif;
-        font-optical-sizing: auto;
-        font-weight: bold;
-        font-style: normal;
-    }
-    /* >>> Feed Search <<< */
-    .feedSearch{
-        width: 100%;
+    font-family: "Ysabeau Infant", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
 
-        display: flex;
-        align-items: center;
-        gap: 5rem;
+.head {
+    font-size: 2rem;
+    font-family: "Smooch Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
 
-        font-family: "Ysabeau Infant", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-    }
+/* >>> Feed Search <<< */
+.feedSearch {
+    width: 100%;
 
-    .search button{
-        border: none;
-        outline: none;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
 
-        height: 40px;
-        width: 40px;
+    font-family: "Ysabeau Infant", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
 
-        background-color: transparent;
+.search button {
+    border: none;
+    outline: none;
 
-        border-bottom: 2px solid black;
-        border-top: 2px solid black;
-        border-left: 2px solid black;
+    height: 40px;
+    width: 40px;
 
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-    }
-    /* >>> Search <<< */
-    .search{
-        display: flex;
-        align-items: center;
-    }
-    /* >>> Filter <<< */
-    .filter{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 2rem;
-    }
+    background-color: transparent;
 
-    .feedTopics{
-        height: 40px;
-        width: 100px;
-        background-color: rgba(128, 128, 128, 0.116);
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
 
-        border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
 
-        display: grid;
-        place-content: center;
-    }
-    /* >>> RESPONSIVE <<< */
+/* >>> Search <<< */
+.search {
+    display: flex;
+    align-items: center;
+}
+
+/* >>> Filter <<< */
+.filter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+
+.feedTopics {
+    height: 40px;
+    width: 100px;
+    background-color: rgba(128, 128, 128, 0.116);
+
+    border-radius: 15px;
+
+    display: grid;
+    place-content: center;
+}
+
+/* >>> RESPONSIVE <<< */
 /*  */
 
 
 /* >>>>> POSTS SECTION <<<<< */
-    .posts{
-        width: 90%;
+.posts {
+    width: 90%;
 
-        overflow: scroll;
-    }
+    overflow: scroll;
+}
 
-    .posts::-webkit-scrollbar {
-        display: none;
-    }
-    /* >>> RESPONSIVE <<< */
+.posts::-webkit-scrollbar {
+    display: none;
+}
+
+/* >>> RESPONSIVE <<< */
 /*  */
 
 
 /* >>>>> RIGHT FEED SECTION <<<<< */
-    .rightFeed{
-        width: 30%;
-        height: 100%;
-        padding: 15px;
-    }
+.rightFeed {
+    width: 30%;
+    height: 100%;
+    padding: 15px;
+}
 
-    .rightFeed h2{
-        margin-top: 20px;
-        margin-bottom: 10px;
+.rightFeed h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
 
-        font-family: "Ysabeau Infant", serif;
-        font-optical-sizing: auto;
-        font-weight: bolder;
-        font-style: normal;
-    }
-    /* >>> Feed Followers <<< */
-    .feedFollows{
+    font-family: "Ysabeau Infant", serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+/* >>> Feed Followers <<< */
+    .feedFollows {
         height: 93%;
         width: 100%;
 
@@ -166,7 +174,9 @@
     }
 
     .feedFollows::-webkit-scrollbar {
-    display: none;
+        display: none;
     }
+
+    
     /* >>> RESPONSIVE <<< */
 /*  */
