@@ -1,17 +1,19 @@
 package com.wecodeZA.backend;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+//import jakarta.persistence.Entity;
+//import jakarta.persistence.Id;
+//import jakarta.persistence.GeneratedValue;
+//import jakarta.persistence.GenerationType;
 
-@Entity
+//@Entity
 public class UserEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
+
+
+    //    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String name;
     private String lastname;
     private String email;
@@ -21,11 +23,11 @@ public class UserEntity {
 
     }
 
-    public UserEntity(Long id, String email, String lastname, String name, Long userId) {
+    public UserEntity(Long id, String email, String lastname, String name) {
+        this.id = id;
         this.email = email;
         this.lastname = lastname;
         this.name = name;
-        this.userId = userId;
     }
 
     public UserEntity(String name, String lastname, String email) {
@@ -34,7 +36,13 @@ public class UserEntity {
         this.email = email;
     }
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
 
     public String getName() {
@@ -61,18 +69,12 @@ public class UserEntity {
         this.lastname = lastname;
     }
 
-    public Long getUserId() {
-        return userId;
-    }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
 
     @Override
     public String toString() {
         return "UserEntity{" +
-                "userId=" + userId +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 ", lastname='" + lastname + '\'' +
                 ", email='" + email + '\'' +
