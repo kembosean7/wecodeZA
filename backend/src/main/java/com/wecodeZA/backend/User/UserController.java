@@ -26,4 +26,6 @@ public class UserController {
         useService.addNewUser(user);
     }
 
+
+
 }
