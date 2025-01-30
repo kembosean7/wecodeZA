@@ -4,9 +4,14 @@ package com.wecodeZA.backend.User;
 import jakarta.persistence.*;
 
 @Entity
-public class UserEntity {
+@Table(
+        name = "users",
+        uniqueConstraints = @UniqueConstraint(
+                name = "email_unique",
+                columnNames = "email"
+        ))
 
-
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,11 +30,11 @@ public class UserEntity {
     private String email;
 
 
-    public UserEntity(){
+    public User(){
 
     }
 
-    public UserEntity(Long id, String email, String lastname,String username, String name) {
+    public User(Long id, String email, String lastname, String username, String name) {
         this.id = id;
         this.email = email;
         this.lastname = lastname;
@@ -37,7 +42,7 @@ public class UserEntity {
         this.username = username;
     }
 
-    public UserEntity(String name, String lastname, String username, String email) {
+    public User(String name, String lastname, String username, String email) {
         this.name = name;
         this.lastname = lastname;
         this.email = email;
@@ -89,7 +94,7 @@ public class UserEntity {
 
     @Override
     public String toString() {
-        return "UserEntity{" +
+        return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", lastname='" + lastname + '\'' +

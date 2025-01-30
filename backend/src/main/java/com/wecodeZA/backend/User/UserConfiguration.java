@@ -1,25 +1,34 @@
 package com.wecodeZA.backend.User;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import java.util.List;
 
 @Configuration
 public class UserConfiguration {
 
+    @Bean
     CommandLineRunner commandLineRunner(
             UserRepository repository) {
         return args -> {
-            UserEntity sean = new UserEntity(
-                    "sekembojhb024@student.wethinkcode",
+            User sean = new User(
+                    "Sean",
                     "Kembo",
                     "kembosean7",
-                    "Sean");
+                    "sekembojhb024@student.wethinkcode"
+            );
 
-            UserEntity jean = new UserEntity(
-                    "jclaudhjbh024@student.wethinkcode",
+            User jean = new User(
+                    "Jean-Claude",
                     "Kumm",
                     "jeankum22",
-                    "Jean-Claud");
+                    "jclaudhjbh024@student.wethinkcode"
+            );
+
+            repository.saveAll(List.of(sean,jean));
+            System.out.println("Saved users: " + List.of(sean, jean));
+
 
 
         };

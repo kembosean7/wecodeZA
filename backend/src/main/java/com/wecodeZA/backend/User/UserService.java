@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -15,11 +16,16 @@ public class UserService {
 
     private  final UserRepository userRepository;
 
-    public List<UserEntity> getUsers() {
+    public List<User> getUsers() {
         return  userRepository.findAll();
+    }
 
-
-
-
+    public void addNewUser(User user) {
+        Optional<User> accountOptional = userRepository.findUserByEmail(user.getEmail());
+        if (accountOptional.isPresent()){
+            throw new IllegalStateException(("Email already taken"));
+        }
+        userRepository.save(user);
     }
 }
+
