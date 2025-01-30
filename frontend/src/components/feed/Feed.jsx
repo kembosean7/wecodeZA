@@ -4,10 +4,13 @@ import Post from '../post/FeedPost'
 import { CiSearch } from "react-icons/ci";
 import FeedPost from '../post/FeedPost';
 import Follow from '../follow/Follow';
+import { IoMdPersonAdd } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
 
 function Feed() {
   return (
     <main className='feedContainer'>
+              <input type="checkbox" id='followSide'/>
         <section className="leftFeed">
 
           <div className="feedTopHeader">
@@ -32,7 +35,11 @@ function Feed() {
               </div>
             </div>
 
-            <h2 className='head'>Articles</h2>
+            <div className="typeHeader">
+              <h2 className='head'>Articles</h2>
+              <label htmlFor="followSide"><IoMdPersonAdd /></label>
+              
+            </div>
 
           </div>
 
@@ -45,6 +52,11 @@ function Feed() {
         </section>
 
         <section className="rightFeed">
+          <label htmlFor="followSide">
+            <IoMdClose />
+          </label>
+          
+
           <h2>People you might be intrested in:</h2>
 
           <div className="feedFollows">

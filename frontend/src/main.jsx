@@ -12,6 +12,6 @@ import Feed from './components/feed/Feed'
 import PostHome from './components/postHome/PostHome'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <PostHome />
+    <Feed />
   </StrictMode>,
 )
