@@ -21,7 +21,7 @@
         font-style: normal;
     }
 
-    input{
+    #sidebar{
         display: none;
     }
     /* >>> RESPONSIVE <<< */
