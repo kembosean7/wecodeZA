@@ -10,8 +10,10 @@ import Footer from './components/footer/Footer';
 import FeedHeader from './components/feedHeader/FeedHeader'
 import Feed from './components/feed/Feed'
 import PostHome from './components/postHome/PostHome'
+import SearchFeed from './pages/searchfeed/SearchFeed'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <PostHome />
+    <FeedHeader />
+    <SearchFeed />
   </StrictMode>,
 )
