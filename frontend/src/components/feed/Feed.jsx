@@ -8,6 +8,7 @@ import { IoMdPersonAdd } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
 import { feedData } from '../testData/TestData';
 import PostHome from '../postHome/PostHome';
+import ViewProfile from '../viewProfile/ViewProfile';
 
 function Feed() {
   const [findPage, setFoundPage] = useState(0);
@@ -92,6 +93,11 @@ function Feed() {
   } else if(findPage == 1){
     return (
       <PostHome id={getData.id} author={getData.author} publishDate={getData.publishDate} profession={getData.profession} title={getData.title} post={getData.description} getPage={setFoundPage}/>
+    )
+  } else if (findPage == 2){
+
+    return (
+      <ViewProfile findPage={setFoundPage} />
     )
   }
 }

@@ -50,6 +50,10 @@ function FeedPost({id, author, publishDate, profession,title, description, findP
         title: title,
         description: description
       })
+    } else if (postPage == 2){
+      console.log("I Ran")
+      setPostPage(2)
+      findPage(postPage)
     }
   },[postPage])
 
@@ -58,7 +62,7 @@ function FeedPost({id, author, publishDate, profession,title, description, findP
 
       <div className="owner">
         <div className="div">
-          <h2>{author}</h2>
+          <h2 onClick={()=> setPostPage(2)}>{author}</h2>
           <p>{publishDate}</p>
         </div>
         <p>{profession}</p>
