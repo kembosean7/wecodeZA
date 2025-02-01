@@ -6,10 +6,9 @@ import { BiLike } from "react-icons/bi";
 
 function PostHome({id, author, publishDate, profession, title, post, getPage}) {
     const [returnFeed, setReturn] = useState(0);
+    
   return (
     <article className='postHome' key={id}>
-        <FeedHeader />
-
         <section className='authorDetails'>
             <FaArrowLeft onClick={()=> getPage(0)} />
             <h2>{author}</h2>
