@@ -17,41 +17,39 @@ function getPostDescription(post){
         for (let x = 0; x <= splitPost.length; x++){
             if (x == 0) getDescription += splitPost[x];
             getDescription += " " + splitPost[x];
-        }
-        getDescription += "...";
+        } 
     } else{
         for (let x = 0; x <= 25; x++){
             if (x == 0) getDescription += splitPost[x];
             getDescription += " " + splitPost[x];
         }
-        getDescription += "...";
     }
-
+    getDescription += "...";
     return getDescription;
 };
 
-function FeedPost({id, author, publishDate, profession,title, description, findPage, reducerSate, getData}) {
+function FeedPost({id, author, publishDate, profession,title, description, findPage, postState, getData}) {
   const [postPage, setPostPage] = useState(0); // State of the page
 
-  let page = postPage;
-  useEffect((i)=>{
+  
+  useEffect(()=>{
     if (postPage == 0){
       setPostPage(0)
       
     } else if(postPage == 1){
       setPostPage(1)
-          // Sends postPage state to the Feed component
-    findPage(postPage);
+      // Sends postPage state to the Feed component
+      findPage(postPage);
 
-    // Sends Selected post data to the Feed component
-    getData({ ...reducerSate,
-      id: id,
-      author: author,
-      publishDate: publishDate,
-      profession: profession,
-      title: title,
-      description: description
-    })
+      // Sends Selected post data to the Feed component
+      getData({ ...postState,
+        id: id,
+        author: author,
+        publishDate: publishDate,
+        profession: profession,
+        title: title,
+        description: description
+      })
     }
   },[postPage])
 

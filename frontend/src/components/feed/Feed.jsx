@@ -62,7 +62,7 @@ function Feed() {
                 feedData.map(x =>{
                   const {id, author, publishDate, proffesion, title, description} = x;
 
-                  return <FeedPost id={id} author={author} publishDate={publishDate} profession={proffesion} title={title} description={description} findPage={setFoundPage} getData={setData} reducerSate={getData}/>
+                  return <FeedPost id={id} author={author} publishDate={publishDate} profession={proffesion} title={title} description={description} findPage={setFoundPage} getData={setData} postState={getData}/>
                 })
               }
             </div>
