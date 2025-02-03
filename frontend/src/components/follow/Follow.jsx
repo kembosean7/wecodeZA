@@ -1,15 +1,15 @@
 import React from 'react'
 import "./follow.css"
 
-function Follow() {
+function Follow({id, author, publishDate, profession, title, post, findPage}) {
   return (
-    <div className="followContainer">
-        <div className="followInfo">
+    <div className="followContainer" key={id}>
+        <div className="followInfo" onClick={()=> findPage(2)}>
             <h2>
-                Alexander I. Agu
+                {author}
             </h2>
             <p>
-                Software Developer
+                {profession}
             </p>
 
             <p>

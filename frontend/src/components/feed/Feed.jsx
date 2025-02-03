@@ -63,7 +63,17 @@ function Feed() {
                 feedData.map(x =>{
                   const {id, author, publishDate, proffesion, title, description} = x;
 
-                  return <FeedPost id={id} author={author} publishDate={publishDate} profession={proffesion} title={title} description={description} findPage={setFoundPage} getData={setData} postState={getData}/>
+                  return <FeedPost 
+                          id={id}
+                          author={author}
+                          publishDate={publishDate}
+                          profession={proffesion}
+                          title={title}
+                          description={description}
+                          findPage={setFoundPage}
+                          getData={setData}
+                          postState={getData}
+                        />
                 })
               }
             </div>
@@ -78,14 +88,22 @@ function Feed() {
             <h2>People you might be intrested in:</h2>
 
             <div className="feedFollows">
-              <Follow />
-              <Follow />
-              <Follow />
-              <Follow />
-              <Follow />
-              <Follow />
-              <Follow />
-              <Follow />
+              {
+                feedData.map(x => {
+                  const {id, author, publishDate, proffesion, title, description} = x;
+                  return (
+                    <Follow 
+                      id={id}
+                      author={author}
+                      publishDate={publishDate}
+                      profession={proffesion}
+                      title={title}
+                      post={description}
+                      findPage={setFoundPage}
+                    />
+                  )
+                })
+              }
             </div>
           </section>
       </main>

@@ -3,13 +3,14 @@ import "./viewProfile.css"
 import ViewProfileHome from '../viewProfileHome/ViewProfileHome'
 import ViewProfileAbout from '../viewProfileAbout/ViewProfileAbout'
 import PostHome from '../postHome/PostHome';
+import { FaArrowLeft } from "react-icons/fa";
 import { viewProfileData } from '../testData/TestData';
 
 /* 
     This components recieves the User Id and uses it to fetch data from the API
 */
 
-function ViewProfile() {
+function ViewProfile({findPage}) {
     // USESTATES
     const [viewNavPage, setViewNavPage] = useState(0); // Navigates through the post and about
     const [page, setPage] = useState(0)
@@ -37,6 +38,7 @@ function ViewProfile() {
         return (
             <article className='viewProfileContainer'>
                 <div className="viewProfileR">
+                    <FaArrowLeft onClick={()=> findPage(0)} />
                     <h1 className='viewAboutName'>Alexander I. Agu</h1>
 
                     <nav className='viewProfileNavbar'>
