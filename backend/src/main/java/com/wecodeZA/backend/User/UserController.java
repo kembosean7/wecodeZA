@@ -43,8 +43,10 @@ public class UserController {
             @RequestParam(required = false) String name,
             @RequestParam(required = false) String lastname,
             @RequestParam(required = false) String email,
-            @RequestParam(required = false) String username){
-        useService.updateUser(id, name, lastname, email, username);
+            @RequestParam(required = false) String username,
+            @RequestParam(required = false) String profession,
+            @RequestParam(required = false) String bio){
+        useService.updateUser(id, name, lastname, email, username, profession, bio);
     }
 
 

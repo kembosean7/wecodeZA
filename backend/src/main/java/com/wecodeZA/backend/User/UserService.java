@@ -69,8 +69,8 @@ public class UserService {
             }
             user.setUsername(username);
         }
-        if (bio != null && !bio.isEmpty() && !Objects.equals(user.getBio(), bio)){
-            user.getBio();
+        if (profession != null && !profession.isEmpty() && !Objects.equals(user.getProfession(), profession)){
+            user.setProfession(profession);
         }
         userRepository.save(user);
     }
