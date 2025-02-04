@@ -44,7 +44,7 @@ public class UserService {
     }
 
     @Transactional
-    public void updateUser(Long id, String name, String lastname, String email, String username) {
+    public void updateUser(Long id, String name, String lastname, String email, String username, String profession, String bio) {
         User user = userRepository.findById(id).orElseThrow(() -> new IllegalStateException("Account with ID: " + id + " does not exist"));
 
         if (name != null && !name.isEmpty() && !Objects.equals(user.getName(), name)) {
@@ -68,6 +68,9 @@ public class UserService {
                 throw new IllegalStateException("Username already taken");
             }
             user.setUsername(username);
+        }
+        if (bio != null && !bio.isEmpty() && !Objects.equals(user.getBio(), bio)){
+            user.getBio();
         }
         userRepository.save(user);
     }
