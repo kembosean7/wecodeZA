@@ -118,6 +118,21 @@ public class User {
         this.password = new BCryptPasswordEncoder().encode(password);
     }
 
+    public String getProfession() {
+        return profession;
+    }
+
+    public void setProfession(String profession) {
+        this.profession = profession;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
 
     @Override
     public String toString() {
