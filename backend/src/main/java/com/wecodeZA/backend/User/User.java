@@ -35,26 +35,37 @@ public class User {
     @JsonIgnore
     private String password;
 
+    @Column(length = 100, nullable = false)
+    private String profession;
+
+
+    @Column(columnDefinition = "TEXT")
+    private String bio;
+
 
     public User(){
 
     }
 
-    public User(Long id, String email, String lastname, String username, String name, String password) {
+    public User(Long id, String email, String lastname, String username, String name, String password, String profession, String bio) {
         this.id = id;
         this.email = email;
         this.lastname = lastname;
         this.name = name;
         this.username = username;
         this.password = password;
+        this.profession = profession;
+        this.bio = bio;
     }
 
-    public User(String name, String lastname, String username, String email, String password) {
+    public User(String name, String lastname, String username, String email, String password, String profession, String bio) {
         this.name = name;
         this.lastname = lastname;
         this.email = email;
         this.username = username;
         this.password = password;
+        this.profession = profession;
+        this.bio = bio;
     }
 
     public Long getId() {
