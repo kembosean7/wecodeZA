@@ -57,7 +57,7 @@ public class UserService {
         if (email != null && !email.isEmpty() && !Objects.equals(user.getEmail(), email)) {
             Optional<User> accountOptional = userRepository.findUserByEmail(email);
             if (accountOptional.isPresent()) {
-                throw new IllegalStateException("Email already taken");
+                throw new IllegalStateException("Email alreadyqw taken");
             }
             user.setEmail(email);
         }
