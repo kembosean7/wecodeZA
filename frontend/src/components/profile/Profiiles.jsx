@@ -18,12 +18,6 @@ function Profiiles() {
 
   return (
     <main className='profileContainer'>
-        <nav profileNavbar>
-            <p>ManAcc</p>
-            <p>LogOut</p>
-        </nav>
-
-        <article className='profileMain'>
             <div className="profileInfo">
                 <h1>Alexander I. Agu</h1>
                 <p>Software Developer at WeThinCode</p>
@@ -62,7 +56,6 @@ function Profiiles() {
                     })
                 }
             </div>
-        </article>
     </main>
   )
 }
