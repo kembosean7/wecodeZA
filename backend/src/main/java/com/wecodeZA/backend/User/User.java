@@ -1,9 +1,12 @@
 package com.wecodeZA.backend.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.wecodeZA.backend.Posts.Post;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(
@@ -42,6 +45,8 @@ public class User {
     @Column(columnDefinition = "TEXT")
     private String bio;
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Post> posts;
 
     public User(){
 

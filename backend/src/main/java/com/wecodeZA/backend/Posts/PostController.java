@@ -9,20 +9,30 @@ import java.util.List;
 @RequestMapping(path = "api/wecode/posts")
 public class PostController {
 
+    public PostController(PostService postService) {
+        this.postService = postService;
+    }
+
     @Autowired
-    private PostService postService;
+    private final PostService postService;
 
 
     @GetMapping()
-    public List<Post> getPosts(){
+    public List<Post> getAllPosts(){
         return  postService.getAllPost();
     }
 
-    @GetMapping("/{id}")
-    public Post getPostById(@PathVariable Long id){
-        return postService.getPostbyId(id);
+//    @GetMapping("/{id}")
+//    public Post getPostById(@PathVariable Long id){
+//        return postService.getPostbyId(id);
+//    }
+    @PostMapping
+    public Post createPost(@RequestParam Long userId,
+                           @RequestParam String title,
+                           @RequestParam String topic,
+                           @RequestParam String context) {
+        return postService.createPost(userId, title, topic, context);
     }
-
 
 
 }
