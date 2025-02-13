@@ -34,6 +34,12 @@ public class PostController {
         return postService.createPost(userId, title, topic, context);
     }
 
+    @DeleteMapping(path = "{id}")
+    public void deleteUser(@PathVariable("id") Long id){
+
+        postService.deletePost(id);
+    }
+
 
 
 }
