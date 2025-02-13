@@ -21,10 +21,10 @@ public class PostService {
     public void savePost(Post post){
         postRepository.save(post);
     }
-//
-//    public Post getPostbyId(Long postId){
-//        return postRepository.findById(postId).orElseThrow(() -> new IllegalStateException("Post with ID " + postId + " not found"));
-//    }
+
+    public Post getPostbyId(Long postId){
+        return postRepository.findById(postId).orElseThrow(() -> new IllegalStateException("Post with ID " + postId + " not found"));
+    }
 
     public List<Post> getAllPost(){
         return postRepository.findAll();

@@ -22,10 +22,7 @@ public class PostController {
         return  postService.getAllPost();
     }
 
-//    @GetMapping("/{id}")
-//    public Post getPostById(@PathVariable Long id){
-//        return postService.getPostbyId(id);
-//    }
+
     @PostMapping
     public Post createPost(@RequestParam Long userId,
                            @RequestParam String title,
