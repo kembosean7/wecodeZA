@@ -31,15 +31,15 @@ public class PostService {
     }
 
 
-//    public void deletePost(Long postId) {
-//
-//        boolean exist = postRepository.existsById(postId);
-//        if(!exist){
-//            throw new IllegalStateException("Post with ID: " + postId + " does not exist");
-//        }
-//
-//        postRepository.deleteById(postId);
-//    }
+    public void deletePost(Long postId) {
+
+        boolean exist = postRepository.existsById(postId);
+        if(!exist){
+            throw new IllegalStateException("Post with ID: " + postId + " does not exist");
+        }
+
+        postRepository.deleteById(postId);
+    }
 
     public Post createPost(Long userId, String title, String topic, String context) {
         User user = userRepository.findById(userId)
