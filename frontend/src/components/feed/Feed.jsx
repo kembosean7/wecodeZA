@@ -25,7 +25,7 @@ function Feed() {
   if(findPage == 0){
     return (
       <main className='feedContainer'>
-                <input type="checkbox" id='followSide'/>
+          <input type="checkbox" id='followSide'/>
           <section className="leftFeed">
 
             <div className="feedTopHeader">

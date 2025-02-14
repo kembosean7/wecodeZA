@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import "./postHome.css"
-import FeedHeader from '../feedHeader/FeedHeader'
 import { FaArrowLeft } from "react-icons/fa";
 import { BiLike } from "react-icons/bi";
 

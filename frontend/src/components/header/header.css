@@ -1,84 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Smooch+Sans:wght@100..900&display=swap');
-
-/* >>>>> HEADER CONTAINER <<<<< */
+/* >>>>> HEADER <<<<< */
     .header{
-        height: 60px;
+        height: 98px;
         width: 100%;
-        padding: 16px;
+
+        background-color: #021C8B;
 
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
     }
 
     .logo{
-        font-family: "Smooch Sans", serif;
-        font-optical-sizing: auto;
-        font-weight: bolder;
-        font-style: normal;
+        width: 233px;
+        height: 59px;
+        margin-left: 40px;
+
+        background-color: white;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+
+        display: grid;
+        place-content: center;
     }
 
-    #sidebar{
+    .logo a{
+        text-decoration: none;
+        color: #021C8B;
+        font-size: 36px;
+        font-family: "Karantina", serif;
+        font-weight: bold;
+        font-style: normal;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 500px) {
+        .header{
+            height: 57px;
+        }
+
+        .logo{
+            width: 132px;
+            height: 33px;
+
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .logo a{
+            font-size: 24px;
+        }
+    }
+/*  */
+
+
+/* >>>>> NAVBAR SECTION <<<<< */
+    .navbar{
+        margin-right: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 860px) {
+        .navbar{
+
+        }
+    }
+/*  */
+
+
+/* >>>>> NAVLIST CONTAINER <<<<< */
+    .navList{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar label{
+        font-size: 2rem;
+        color: white;
+        display: none;
+    }
+    .navbar input{
         display: none;
     }
     /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 860px) {
+        .navbar label{
+            display: block;
+        }
+        .navList{
+            height: 381px;
+            width: 250px;
+            
+            background-color: #021C8B;
+
+            position: fixed;
+            top: 0;
+            right: -250px;
+            z-index: 1;
+            
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #sidebar:checked ~ .navList{
+            right: 0;
+        }
+    }
 /*  */
 
 
-/* >>>>> NAVBAR <<<<< */
-    .navbar{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    /* >>> RESPONSIVE <<< */
-/*  */
-
-
-/* >>>>> NAVLIST CONTAINER SECTION <<<<< */
-    .navList{
-        height: 100vh;
-        width: 200px;
-        padding: 20px;
-
-        list-style: none;
-        background-color: #334Aec;
-
-        position: fixed;
-        top: 0;
-        right: -200px;
-        z-index: 2;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 1.4rem;
-    }
-
+/* >>>>> NAVITEM CONTAINER <<<<< */
     .navItem{
-        font-size: 1.5rem;
-        font-family: "Smooch Sans", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
+        width: 197px;
+        height: 59px;
+
+        background-color: transparent;
+        border: 1px solid white;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+
+        display: grid;
+        place-content: center;
+    }
+
+    .navHome{
+        width: 142px;
+
+        display: grid;
+        place-content: center;
     }
 
     .navLink{
-        color: black;
         text-decoration: none;
+        color: white;
+        font-size: 36px;
+        font-family: "Karantina", serif;
+        font-weight: bold;
+        font-style: normal;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1000px) {
+        .navItem{
+            width: 157px;
+        }
+
+        .navHome{
+            width: 122px;
+        }
+
+        .navLink{
+            font-size: 20px;
+        }
     }
 
-    #sidebar:checked ~ .navList{
-        right: 0;
-        transition: 300ms;
-    }
+    @media screen and (max-width: 860px) {
+        .navItem{
+            width: 157px;
+            border: none;
+        }
 
-    #sidebar:checked ~ .menu{
-        display: none;
+        .navHome{
+            width: 122px;
+        }
+
+        .navLink{
+            font-size: 36px;
+        }
     }
-    /* >>> RESPONSIVE <<<< */
 /*  */
