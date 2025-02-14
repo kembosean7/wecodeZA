@@ -1,38 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Bahianita&family=Belanosima:wght@400;600;700&family=Smooch+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 /* >>>>> FEATURE CONTAINER <<<<< */
     .featureContainer{
-        height: 15rem;
-        width: 15rem;
-        padding: 20px;
+        height: 90vh;
+        width: 45rem;
+        margin: 0 auto;
+        padding: 50px;
 
-        background-color: #fff9f0;
+        border: 1px solid black;
+        border-top-left-radius: 100px;
 
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-
-        font-family: "Smooch Sans", serif;
-        font-optical-sizing: auto;
-        font-weight: bold;
-        font-style: normal;
-
-        border-top-right-radius: 25px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.541);
-    }
-
-    .featureContainer h1{
-        font-size: 4rem;
-        font-weight: bolder;
-    }
-
-    .featureContainer h2{
-        font-weight: bold;
-    }
-
-    .featureContainer p{
-        font-weight: 500
     }
     /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1470px) {
+        .featureContainer{
+            width: 40rem;
+        }
+    }
+
+    @media screen and (max-width: 1310px) {
+        .featureContainer{
+            width: 90%;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .featureContainer{
+            width: 90%;
+            height: 60vh;
+        }
+    }
+
+    @media screen and (max-width: 610px) {
+        .featureContainer{
+            width: 90%;
+            height: 45vh;
+        }
+    }
+/*  */
+
+
+/* >>>>> FEATURE NAME CONTAINER <<<<< */
+    .featureName{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .featureName h2 {
+        font-size: 64px;
+        font-family: "Karantina", serif;
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    .featureName p{
+        font-size: 24px;
+        font-family: "Karla", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1470px) {
+        .featureName{
+
+        }
+
+        .featureName h2{
+            font-size: 54px;
+        }
+
+        .featureName p{
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 1050px) {
+        .featureName{
+
+        }
+
+        .featureName h2{
+            font-size: 44px;
+        }
+
+        .featureName p{
+            font-size: 15px;
+        }
+    }
+
+    @media screen and (max-width: 610px) {
+        .featureName{
+
+        }
+
+        .featureName h2{
+            font-size: 24px;
+        }
+
+        .featureName p{
+            font-size: 12px;
+        }
+    }
+/*  */
+
+
+/* >>>> FEATURE POST CONTAINER <<<<< */
+    .featurePost{
+        margin-top: 50px;
+        font-size: 30px;
+        font-family: "Karla", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1050px) {
+        .featurePost{
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .featurePost{
+            font-size: 10px;
+        }
+    }
+
+    @media screen and (max-width: 610px) {
+        .featurePost{
+            font-size: 8px;
+        }
+    }
 /*  */
