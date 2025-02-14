@@ -98,8 +98,8 @@
             background-color: #021C8B;
 
             position: fixed;
-            top: 0;
-            right: -250px;
+            top: -385px;
+            right: 0;
             z-index: 1;
             
             flex-direction: column;
@@ -108,7 +108,8 @@
         }
 
         #sidebar:checked ~ .navList{
-            right: 0;
+            transition: 300ms;
+            top: 0;
         }
     }
 /*  */

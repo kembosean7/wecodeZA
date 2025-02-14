@@ -22,7 +22,7 @@ function Header() {
                 </label>
 
                 <li className='navItem navHome'>
-                    <a href="#" className='navLink navHome'>Home</a>
+                    <a href="#" className='navLink'>Home</a>
                 </li>
 
                 <li className='navItem'>
