@@ -30,7 +30,13 @@ public class PostService {
         return postRepository.findAll();
     }
 
-
+    public List<Post> getPostsByUserId(Long userId) {
+        List<Post> post = postRepository.findByUserId(userId);
+        if (post.isEmpty()) {
+            throw new IllegalStateException("No posts found for user with ID " + userId);
+        }
+        return post;
+    }
     public void deletePost(Long postId) {
 
         boolean exist = postRepository.existsById(postId);
@@ -42,10 +48,16 @@ public class PostService {
     }
 
     public Post createPost(Long userId, String title, String topic, String context) {
+
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new IllegalStateException("User not found"));
+
+
         Post post = new Post(user, title, topic, context);
+
+
         return postRepository.save(post);
+
     }
 
 

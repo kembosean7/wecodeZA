@@ -13,10 +13,13 @@ import java.util.Optional;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final BCryptPasswordEncoder passwordEncoder;
+
 
     @Autowired
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
+        passwordEncoder = new BCryptPasswordEncoder();
     }
 
     public List<User> getUsers() {
@@ -27,6 +30,10 @@ public class UserService {
         Optional<User> accountOptional = userRepository.findUserByEmail(user.getEmail());
         if (accountOptional.isPresent()){
             throw new IllegalStateException(("Email already taken"));
+        }
+
+        if (user.getPassword() == null || user.getPassword().isEmpty()) {
+            throw new IllegalArgumentException("Password cannot be null or empty");
         }
         user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
 

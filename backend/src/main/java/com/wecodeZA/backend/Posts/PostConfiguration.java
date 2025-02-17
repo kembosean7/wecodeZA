@@ -15,10 +15,10 @@ public class PostConfiguration {
     CommandLineRunner postCommandLineRunner(PostRepository postRepository, UserRepository userRepository) {
         return args -> {
             // Fetch users from the database
-            User sean = userRepository.findUserByUsername("kembosean7")
+            User sean = userRepository.findById(1L)
                     .orElseThrow(() -> new IllegalStateException("User not found"));
 
-            User jean = userRepository.findUserByUsername("jeankum22")
+            User jean = userRepository.findById(2L)
                     .orElseThrow(() -> new IllegalStateException("User not found"));
 
             // Create sample posts
@@ -30,7 +30,9 @@ public class PostConfiguration {
             // Save posts to the database
             postRepository.saveAll(List.of(post1, post2, post3, post4));
 
-            System.out.println("Sample posts saved.");
+            System.out.println("Sample posts saved." +
+                    "" +
+                    "");
         };
     }
 }

@@ -1,5 +1,5 @@
 package com.wecodeZA.backend.User;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.wecodeZA.backend.Posts.Post;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -35,7 +35,7 @@ public class User {
     private String email;
 
     @Column(nullable = false)
-    @JsonIgnore
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
     @Column(length = 100, nullable = false)
@@ -119,8 +119,11 @@ public class User {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = new BCryptPasswordEncoder().encode(password);
+    public void setPassword(String rawPassword) {
+        if (rawPassword == null || rawPassword.trim().isEmpty()) {
+            throw new IllegalArgumentException("Password cannot be null or empty");
+        }
+        this.password = new BCryptPasswordEncoder().encode(rawPassword);
     }
 
     public String getProfession() {
