@@ -36,7 +36,7 @@ function Hero() {
             </div>
 
             <div className="heroDetails">
-                <h2>
+                <h2 className='heroHeader'>
                      Our tech blog offers clear, insightful content, fresh perspectives and practical advice, making complex topics accessible to all readers.
                 </h2>
 

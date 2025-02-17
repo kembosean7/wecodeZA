@@ -1,25 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './login.css'
 
 function Login() {
+    const [email, setEmail] = useState();
+    const [passcode, setPasscode] = useState();
+
     return (
-        <section>
-            <h1>Login</h1>
-            
-            <div className='login_container'>
-                <form className='login_form'>
-                    <div className='form_group'>
-                        <label>Email</label>
-                        <input type='email' name='email' id='email' placeholder='Email' />
-                    </div>
-                    <div className='form_group'>
-                        <label>Password</label>
-                        <input type='password' name='password' id='password' placeholder='password' />
-                    </div>
-                    <button type='submit'>Login</button>
-                </form>
+        <article className='loginApp'>
+            <h2 className='loginWelcome'>
+                Welcome back to WeCodeZa
+            </h2>
+
+            <div className="loginContainer">
+                <div className="loginForm">
+                    <input type="text" onChange={e => setEmail(e.target.value)} placeholder='Email' value={email} />
+                    <input type="text" onChange={e => setPasscode(e.target.value)} placeholder='Password' value={passcode} />
+                </div>
+
+                <button className='loginSubmit'>
+                    Login
+                </button>
+                <p>
+                    Dont't have an account? <a href="">Sign Up</a> instead.
+                </p>
             </div>
-        </section>
+        </article>
     )
 }
 
