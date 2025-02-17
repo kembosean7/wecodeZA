@@ -119,11 +119,8 @@ public class User {
         return password;
     }
 
-    public void setPassword(String rawPassword) {
-        if (rawPassword == null || rawPassword.trim().isEmpty()) {
-            throw new IllegalArgumentException("Password cannot be null or empty");
-        }
-        this.password = new BCryptPasswordEncoder().encode(rawPassword);
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getProfession() {

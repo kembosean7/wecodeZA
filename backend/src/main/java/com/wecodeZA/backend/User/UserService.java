@@ -35,15 +35,24 @@ public class UserService {
 
         Optional<User> accountOptional = userRepository.findUserByEmail(user.getEmail());
         if (accountOptional.isPresent()){
-            throw new IllegalStateException(("Email already taken"));
+            throw new IllegalStateException("Email already taken");
         }
 
         if (user.getPassword() == null || user.getPassword().isEmpty()) {
             throw new IllegalArgumentException("Password cannot be null or empty");
         }
 
-        if (user.getPassword().length() < 8 || !user.getPassword().matches(".*\\d.*") || !user.getPassword().matches(".*[!@#$%^&*].*")){
-            throw new IllegalArgumentException("Password must be at least 8 characters long and contain at least one number and one special character");
+
+        if (user.getPassword().length() < 8) {
+            throw new IllegalArgumentException("Password must be at least 8 characters long");
+        }
+
+        if (!user.getPassword().matches(".*\\d.*")) {
+            throw new IllegalArgumentException("Password must contain at least one number");
+        }
+
+        if (!user.getPassword().matches(".*[!@#$%^&*(),.?\":{}|<>].*")) {
+            throw new IllegalArgumentException("Password must contain at least one special character");
         }
 
         if (user.getUsername() == null || user.getUsername().isEmpty()) {
@@ -54,15 +63,30 @@ public class UserService {
             throw new IllegalArgumentException("Profession cannot be null or empty");
         }
 
-        if (user.getBio() != null && user.getBio().length() > 300) {
+        if (user.getBio() != null && user.getBio().length() > 500) {
             throw new IllegalArgumentException("Bio description is too long");
         }
 
 
         user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
 
+
         userRepository.save(user);
     }
+    private void validatePassword(String password){
+        if (password.length() < 8){
+            throw new IllegalArgumentException("Password must be at least 8 characters long");
+        }
+        if (!password.matches(".*\\d.*")) {
+            throw new IllegalArgumentException("Password must contain at least one number");
+        }
+
+
+        if (!password.matches(".*[!@#$%^&*(),.?\":{}|<>].*")) {
+            throw new IllegalArgumentException("Password must contain at least one special character");
+        }
+    }
+
 
     public void deleteUser(Long id) {
 
