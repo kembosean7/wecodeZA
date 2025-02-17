@@ -54,6 +54,10 @@ public class UserService {
             throw new IllegalArgumentException("Profession cannot be null or empty");
         }
 
+        if (user.getBio() != null && user.getBio().length() > 300) {
+            throw new IllegalArgumentException("Bio description is too long");
+        }
+
 
         user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
 
