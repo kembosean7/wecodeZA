@@ -50,6 +50,11 @@ public class UserService {
             throw new IllegalArgumentException("Username cannot be null or empty");
         }
 
+        if (user.getProfession() == null || user.getProfession().isEmpty()) {
+            throw new IllegalArgumentException("Profession cannot be null or empty");
+        }
+
+
         user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
 
         userRepository.save(user);
