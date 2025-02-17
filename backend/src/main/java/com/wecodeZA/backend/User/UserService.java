@@ -41,6 +41,10 @@ public class UserService {
         if (user.getPassword() == null || user.getPassword().isEmpty()) {
             throw new IllegalArgumentException("Password cannot be null or empty");
         }
+
+        if (user.getPassword().length() < 8 || !user.getPassword().matches(".*\\d.*") || !user.getPassword().matches(".*[!@#$%^&*].*")){
+            throw new IllegalArgumentException("Password must be at least 8 characters long and contain at least one number and one special character");
+        }
         user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
 
         userRepository.save(user);
