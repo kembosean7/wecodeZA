@@ -26,13 +26,13 @@ function Hero() {
 
         <div className="bottomHero">
             <div className="heroLinks">
-                <button className='heroPost'>
+                <a href='/signup' className='heroPost'>
                     <p>Create a Post</p> <BsArrowRightSquare />
-                </button>
+                </a>
 
-                <button className='heroRead'>
+                <a href='/login' className='heroRead'>
                     <p>Read Post</p> <BsArrowRightSquareFill />
-                </button>
+                </a>
             </div>
 
             <div className="heroDetails">
