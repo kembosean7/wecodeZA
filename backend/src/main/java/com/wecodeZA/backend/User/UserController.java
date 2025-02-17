@@ -19,7 +19,6 @@ public class UserController {
     public List<User> getUsers(){
         return useService.getUsers();
 
-
     }
 
     @GetMapping(path = "/users/{id}")

@@ -27,6 +27,12 @@ public class UserService {
     }
 
     public void addNewUser(User user) {
+
+        String email = user.getEmail();
+        if (email == null || !email.endsWith("@student.wethinkcode.co.za")) {
+            throw new IllegalArgumentException("Email must end with @student.wethinkcode.co.za");
+        }
+
         Optional<User> accountOptional = userRepository.findUserByEmail(user.getEmail());
         if (accountOptional.isPresent()){
             throw new IllegalStateException(("Email already taken"));
