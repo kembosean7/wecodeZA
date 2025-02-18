@@ -39,8 +39,6 @@ public class PostController {
     }
 
 
-
-
     @DeleteMapping(path = "posts/{id}")
     public void deleteUser(@PathVariable("id") Long id){
 

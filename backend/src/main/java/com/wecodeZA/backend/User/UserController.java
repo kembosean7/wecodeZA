@@ -62,7 +62,7 @@ public class UserController {
             @RequestParam(required = false) String profession,
             @RequestParam(required = false) String bio){
         useService.updateUser(id, name, lastname, email, username, profession, bio);
-        return ResponseEntity.ok("User details successfully changed");
+        return ResponseEntity.ok("User details successfully updated");
     }
 
 
