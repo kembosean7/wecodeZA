@@ -1,7 +1,12 @@
 package com.wecodeZA.backend.User;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.wecodeZA.backend.Posts.Post;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(
@@ -29,24 +34,43 @@ public class User {
     @Column(length = 100, nullable = false)
     private String email;
 
+    @Column(nullable = false)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private String password;
+
+    @Column(length = 100, nullable = false)
+    private String profession;
+
+
+    @Column(columnDefinition = "TEXT")
+    private String bio;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Post> posts;
 
     public User(){
 
     }
 
-    public User(Long id, String email, String lastname, String username, String name) {
+    public User(Long id, String email, String lastname, String username, String name, String password, String profession, String bio) {
         this.id = id;
         this.email = email;
         this.lastname = lastname;
         this.name = name;
         this.username = username;
+        this.password = password;
+        this.profession = profession;
+        this.bio = bio;
     }
 
-    public User(String name, String lastname, String username, String email) {
+    public User(String name, String lastname, String username, String email, String password, String profession, String bio) {
         this.name = name;
         this.lastname = lastname;
         this.email = email;
         this.username = username;
+        this.password = password;
+        this.profession = profession;
+        this.bio = bio;
     }
 
     public Long getId() {
@@ -91,6 +115,29 @@ public class User {
         this.username = username;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getProfession() {
+        return profession;
+    }
+
+    public void setProfession(String profession) {
+        this.profession = profession;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
 
     @Override
     public String toString() {
@@ -100,6 +147,9 @@ public class User {
                 ", lastname='" + lastname + '\'' +
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", profession='" + profession + '\'' +
+                ", bio='" + bio + '\'' +
                 '}';
     }
 
