@@ -32,14 +32,16 @@ public class UserController {
         useService.addNewUser(user);
     }
 
-    @PostMapping("/login")
+    @PostMapping("users//login")
     public ResponseEntity<String> login(@RequestBody User user){
         boolean isValid = useService.validateUser(user.getUsername(), user.getPassword());
 
-        if(!isValid){
-            throw new IllegalStateException("Invalid credentials");
+        if(isValid){
+            return ResponseEntity.ok("Login successful");
         }
-        return ResponseEntity.ok("Login successful");
+        else {
+            return ResponseEntity.status(401).body("Invalid credentials");
+        }
     }
 
     @DeleteMapping(path = "/users/{id}")
