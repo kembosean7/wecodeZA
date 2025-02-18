@@ -53,7 +53,7 @@ public class UserController {
     }
 
     @PutMapping(path = "/users/{id}")
-    public void updateUser(
+    public ResponseEntity<String> updateUser(
             @PathVariable("id") Long id,
             @RequestParam(required = false) String name,
             @RequestParam(required = false) String lastname,
@@ -62,6 +62,7 @@ public class UserController {
             @RequestParam(required = false) String profession,
             @RequestParam(required = false) String bio){
         useService.updateUser(id, name, lastname, email, username, profession, bio);
+        return ResponseEntity.ok("User details successfully changed");
     }
 
 
