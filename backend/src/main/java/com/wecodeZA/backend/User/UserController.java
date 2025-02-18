@@ -1,5 +1,6 @@
 package com.wecodeZA.backend.User;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,6 +30,16 @@ public class UserController {
     @PostMapping("users/signup")
     public void signupUser(@RequestBody User user){
         useService.addNewUser(user);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody User user){
+        boolean isValid = useService.validateUser(user.getUsername(), user.getPassword());
+
+        if(!isValid){
+            throw new IllegalStateException("Invalid credentials");
+        }
+        return ResponseEntity.ok("Login successful");
     }
 
     @DeleteMapping(path = "/users/{id}")
