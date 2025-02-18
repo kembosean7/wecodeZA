@@ -28,11 +28,12 @@ public class UserController {
     }
 
     @PostMapping("users/signup")
-    public void signupUser(@RequestBody User user){
+    public ResponseEntity<String> signupUser(@RequestBody User user){
         useService.addNewUser(user);
+        return ResponseEntity.ok("Sign up successful");
     }
 
-    @PostMapping("users//login")
+    @PostMapping("users/login")
     public ResponseEntity<String> login(@RequestBody User user){
         boolean isValid = useService.validateUser(user.getUsername(), user.getPassword());
 
@@ -47,6 +48,7 @@ public class UserController {
     @DeleteMapping(path = "/users/{id}")
     public void deleteUser(@PathVariable("id") Long id){
         useService.deleteUser(id);
+
     }
 
     @PutMapping(path = "/users/{id}")
