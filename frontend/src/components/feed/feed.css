@@ -1,434 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Bahianita&family=Belanosima:wght@400;600;700&family=Smooch+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
 
-/* >>>>> FEED CONTAINER <<<<< */
-    .feedContainer {
+/* >>>>> FEED MAIN <<<<< */
+    .feedMain{
         width: 100%;
-        height: 90vh;
+        /* height: 100vh; */
 
         display: flex;
     }
-
-    #followSide{
-        display: none;
-    }
-
     /* >>> RESPONSIVE <<< */
-    @media screen and (max-width: 1600px) {
-        .feedContainer{
-
-        }
+    @media screen and (max-width: 1400px) {
+        
     }
 /*  */
 
 
-/* >>>>> LEFT FEED SECTION <<<<< */
-    .leftFeed {
-        width: 70%;
+/* >>>>> LEFT SIDE OF FEED <<<<< */
+    .feedLeft{
         height: 100%;
-
-        border-right: 2px solid rgba(128, 128, 128, 0.219);
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 80%;
+        padding: 30px;
     }
-
     /* >>> RESPONSIVE <<< */
-    @media screen and (max-width: 800px) {
-        .leftFeed{
+    @media screen and (max-width: 950px) {
+        .feedLeft{
             width: 100%;
+            padding: 15px;
         }
     }
 /*  */
 
 
-/* >>>>> TOP FEED HEADER SECTION <<<<< */
-    .feedTopHeader {
-        height: 150px;
-        width: 90%;
+/* >>>>> TOP FEED SECTION <<<<< */
+    .topFeed{
+        width: 100%;
+        height: 90px;
         padding: 20px;
 
-        border-bottom: 2px solid rgba(128, 128, 128, 0.219);
+        border-bottom: 1px solid black;
 
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 2rem;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
     }
 
-    .feedContainer input {
-        display: block;
+    .topFeed button{
+        font-size: 24px;
+        font-family: "Khand", serif;
+        font-weight: 300;
+        font-style: normal;
+
         border: none;
+        background-color: transparent;
         outline: none;
-
-        height: 40px;
-        width: 200px;
-
-        border-bottom: 2px solid black;
-        border-top: 2px solid black;
-        border-right: 2px solid black;
-
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-
-        font-family: "Ysabeau Infant", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
     }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1400px) {
 
-    .head {
-        font-size: 2rem;
-        font-family: "Smooch Sans", serif;
-        font-optical-sizing: auto;
-        font-weight: bold;
-        font-style: normal;
     }
+/*  */
 
-    /* >>> Feed Search <<< */
-    .feedSearch {
+
+/* >>>>> BOTTOM FEED SECTION <<<<< */
+    .bottomFeed{
         width: 100%;
 
-        display: flex;
-        align-items: center;
-        gap: 5rem;
+        display: grid;
+        place-items: center;
+        flex-direction: column;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1400px) {
 
-        font-family: "Ysabeau Infant", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
+    }
+/*  */
+
+
+/* >>>>> RIGHT SIDE OF FEED <<<<< */
+    .rightFeed{
+        height: 100vh;
+        width: 20%;
+        padding: 20px;
+
+        border-left: 1px solid black;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .fh{
+        font-size: 32px;
+        font-family: "Khand", serif;
+        font-weight: 300;
         font-style: normal;
     }
-
-    .search button {
-        border: none;
-        outline: none;
-
-        height: 40px;
-        width: 40px;
-
-        background-color: transparent;
-
-        border-bottom: 2px solid black;
-        border-top: 2px solid black;
-        border-left: 2px solid black;
-
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-    }
-
-    /* >>> Search <<< */
-    .search {
-        display: flex;
-        align-items: center;
-    }
-
-    /* >>> Filter <<< */
-    .filter {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .feedTopics {
-        height: 40px;
-        width: 100px;
-        background-color: rgba(128, 128, 128, 0.116);
-
-        border-radius: 15px;
-
-        display: grid;
-        place-content: center;
-    }
-
     /* >>> RESPONSIVE <<< */
-    @media screen and (max-width:1600px) {
-        .feedTopHeader{
-
-        }
-
-        .feedContainer input{
-
-        }
-
-        .head{
-
-        }
-        /* >> Feed Search << */
-        .feedSearch{
-            gap: 0.8rem;
-        }
-
-        .search button{
-            
-        }
-        /* >> Search << */
-        .search{
-
-        }
-        /* >> Filter << */
-        .filter{
-            gap: 0.5rem;
-        }
-
-        .feedTopics{
-
-        }
-    }
-
-    @media screen and (max-width:1300px) {
-        .feedTopHeader{
-
-        }
-
-        .feedContainer input{
-
-        }
-
-        .head{
-
-        }
-        /* >> Feed Search << */
-        .feedSearch{
-            gap: 0.8rem;
-        }
-
-        .search button{
-            
-        }
-        /* >> Search << */
-        .search{
-
-        }
-        /* >> Filter << */
-        .filter{
+    @media screen and (max-width: 950px) {
+        .rightFeed{
             display: none;
-        }
-
-        .feedTopics{
-
-        }
-    }
-
-    @media screen and (max-width:1000px) {
-        .feedTopHeader{
-
-        }
-
-        .feedContainer input{
-
-        }
-
-        .head{
-
-        }
-        /* >> Feed Search << */
-        .feedSearch{
-            gap: 0.8rem;
-        }
-
-        .search button{
-            
-        }
-        /* >> Search << */
-        .search{
-
-        }
-        /* >> Filter << */
-        .filter{
-            display: none;
-        }
-
-        .feedTopics{
-
-        }
-    }
-
-    @media screen and (max-width:800px) {
-        .feedTopHeader{
-
-        }
-
-        .feedContainer input{
-
-        }
-
-        .head{
-
-        }
-        /* >> Feed Search << */
-        .feedSearch{
-            gap: 0.8rem;
-        }
-
-        .search button{
-            
-        }
-        /* >> Search << */
-        .search{
-
-        }
-        /* >> Filter << */
-        .filter{
-            display: none;
-        }
-
-        .feedTopics{
-
         }
     }
 /*  */
 
 
-/* >>>>> POSTS SECTION <<<<< */
-    .posts {
-        width: 90%;
-
+/* >>>>> FEED FOLLOW SECTION <<<<< */
+    .feedFollow{
         overflow: scroll;
     }
 
-    .posts::-webkit-scrollbar {
+    .feedFollow::-webkit-scrollbar{
         display: none;
     }
+    /* >>> RESPONSIVIE <<< */
+    @media screen and (max-width: 1400px) {
 
-    /* >>> RESPONSIVE <<< */
-    @media screen and (max-width: 1600px) {
-        .posts{
-
-        }
     }
-
-    @media screen and (max-width: 1000px) {
-        .posts{
-
-        }
-    }
-/*  */
-
-
-/* >>>>> RIGHT FEED SECTION <<<<< */
-    .rightFeed {
-        width: 30%;
-        height: 100%;
-        padding: 15px;
-    }
-
-    .rightFeed h2 {
-        margin-top: 20px;
-        margin-bottom: 10px;
-
-        font-family: "Ysabeau Infant", serif;
-        font-optical-sizing: auto;
-        font-weight: bolder;
-        font-style: normal;
-    }
-
-    .typeHeader{
-        width: 100%;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    /* >>> Feed Followers <<< */
-        .feedFollows {
-            height: 93%;
-            width: 100%;
-
-            overflow: scroll;
-        }
-
-        .feedFollows::-webkit-scrollbar {
-            display: none;
-        }
-
-        
-        /* >>> RESPONSIVE <<< */
-        @media screen and (max-width: 1600px) {
-            .rightFeed{
-
-            }
-
-            .rightFeed h2{
-
-            }
-            /* >> Feed Followers << */
-            .feedFollows{
-
-            }
-        }
-
-        @media screen and (max-width: 1000px) {
-            .rightFeed{
-
-            }
-
-            .rightFeed h2{
-
-            }
-            /* >> Feed Followers << */
-            .feedFollows{
-
-            }
-        }
-
-        @media screen and (max-width: 800px) {
-            .rightFeed{
-                width: 50%;
-                position: fixed;
-                right: 0;
-                top: 0;
-                background-color: white;
-                border-left: 2px solid black;
-            }
-
-            .rightFeed h2{
-
-            }
-            #followSide{
-                display: none;
-            }
-            /* >> Feed Followers << */
-            .feedFollows{
-
-            }
-            /* Tring to make this slide to the left but its not allowing me */
-            #followSide:checked ~ .rightFeed{
-                right: -50%;
-            }
-            #followSide:checked ~ .leftFeed{
-            backdrop-filter: blur(10px);
-            }
-        }
-
-        @media screen and (max-width: 400px) {
-            .rightFeed{
-                width: 90%;
-                position: fixed;
-                right: 0;
-                top: 0;
-                background-color: white;
-                border-left: 2px solid black;
-            }
-
-            .rightFeed h2{
-
-            }
-            #followSide{
-                display: none;
-            }
-            /* >> Feed Followers << */
-            .feedFollows{
-
-            }
-            /* Tring to make this slide to the left but its not allowing me */
-            #followSide:checked ~ .rightFeed{
-                right: -90%;
-            }
-            #followSide:checked ~ .leftFeed{
-            backdrop-filter: blur(10px);
-            }
-        }
 /*  */

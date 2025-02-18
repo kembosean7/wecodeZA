@@ -22,15 +22,15 @@ function Header() {
                 </label>
 
                 <li className='navItem navHome'>
-                    <a href="#" className='navLink'>Home</a>
+                    <a href="/" className='navLink'>Home</a>
                 </li>
 
                 <li className='navItem'>
-                    <a href="#" className='navLink'>Login</a>
+                    <a href="/login" className='navLink'>Login</a>
                 </li>
 
                 <li className='navItem'>
-                    <a href="#" className='navLink'>Sign Up</a>
+                    <a href="/signup" className='navLink'>Sign Up</a>
                 </li>
 
             </ul>

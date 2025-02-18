@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { Route, Router, Routes } from 'react-router-dom'
 import Home from "./pages/home/Home";
@@ -10,8 +10,8 @@ function App() {
     <BrowserRouter>
         <Routes>
             <Route path='/' element={<Home/>} />
-            <Route path='/login' element={<Login/>} />
-            <Route path='/signup' element={<Signup/>} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/signup' element={<Signup />} />
         </Routes>
     </BrowserRouter>
   )
