@@ -112,7 +112,7 @@ public class UserService {
         if (email != null && !email.isEmpty() && !Objects.equals(user.getEmail(), email)) {
             Optional<User> accountOptional = userRepository.findUserByEmail(email);
             if (accountOptional.isPresent()) {
-                throw new IllegalStateException("Email alreadyqw taken");
+                throw new IllegalStateException("Email already taken");
             }
             user.setEmail(email);
         }
@@ -128,6 +128,17 @@ public class UserService {
             user.setProfession(profession);
         }
         userRepository.save(user);
+    }
+    public boolean validateUser(String username, String rawPassword){
+        Optional<User> optionalUser = userRepository.findUserByUsername(username);
+
+        if(optionalUser.isPresent()){
+            User user = optionalUser.get();
+            return passwordEncoder.matches(rawPassword, user.getPassword());
+        }
+        else {
+            return false;
+        }
     }
 
     public User getUserById(Long id) {
