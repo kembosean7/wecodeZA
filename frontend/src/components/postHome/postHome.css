@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+/* >>>>> POST HOME CONTAINER <<<<< */
+    .postHomeContainer{
+        width: 100%;
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */
+
+
+/* >>>>> POST HOME BACK BUTTONS <<<<<< */
+    .postHomeBackButton{
+        margin: 20px;
+    }
+
+    .postHomebackButton button{
+        margin: 20px;
+        width: 45px;
+        height: 45px;
+
+        font-size: 20px;
+
+        border: 1px solid black;
+        outline: none;
+        background-color: transparent;
+        border-radius: 50%;
+
+        display: grid;
+        place-content: center;
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */
+
+
+/* >>>>> POST HOME MAIN <<<<< */
+    .postHomeMain{
+        width: 100%;
+        padding: 50px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .postHomeMain p{
+        font-size: 2rem;
+        font-family: "Kulim Park", serif;
+        font-weight: 200;
+        font-style: normal;
+    }
+
+    .postHomeName, .postHomeTitle, .postHomeTopic{
+        font-family: "League Gothic", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+
+    .postHomeName{
+        font-size: 6rem;
+    }
+
+    .postHomeTopic{
+        font-size: 4rem;
+    }
+
+    .postHomeTitle{
+        font-size: 8rem;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1000px) {
+        .postHomeMain p{
+            font-size: 1.5rem;
+        }
+
+        .postHomeName{
+            font-size: 4rem;
+        }
+
+        .postHomeTopic{
+            font-size: 3rem;
+        }
+
+        .postHomeTitle{
+            font-size: 6rem;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .postHomeMain p{
+            font-size: 1.2rem;
+        }
+
+        .postHomeName{
+            font-size: 3rem;
+        }
+
+        .postHomeTopic{
+            font-size: 2rem;
+        }
+
+        .postHomeTitle{
+            font-size: 4rem;
+        }
+    }
+    @media screen and (max-width: 450px) {
+        .postHomeMain p{
+            font-size: 1rem;
+        }
+
+        .postHomeName{
+            font-size: 2.5rem;
+        }
+
+        .postHomeTopic{
+            font-size: 1.5rem;
+        }
+
+        .postHomeTitle{
+            font-size: 3rem;
+        }
+    }
+/*  */
