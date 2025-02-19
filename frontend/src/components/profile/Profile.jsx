@@ -26,6 +26,7 @@ function Profile({}) {
     const [userPage, setUserPage] = useState(0);
     let currentPage = <ProfileHome buttonTypes={postButtons} />
 
+    // Navigates the Home and About sections
     if (userPage === 0) currentPage = <ProfileHome buttonTypes={postButtons} />
     else if (userPage === 1) currentPage = <ProfileAbout />
   return (
