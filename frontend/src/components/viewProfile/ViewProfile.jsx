@@ -3,8 +3,15 @@ import "./viewProfile.css"
 import { FaArrowLeft } from "react-icons/fa6";
 import ProfileHome from '../profileHome/ProfileHome';
 import ProfileAbout from '../profileAbout/ProfileAbout';
+import { CiHeart } from "react-icons/ci";
 
 function ViewProfile() {
+    const postButtons = [
+        {
+            id: "l",
+            icon: <CiHeart />
+        }
+    ]
   return (
     <main className='viewProfileMain'>
         <article className="viewProfileLeft">
@@ -30,7 +37,7 @@ function ViewProfile() {
                     </button>
                 </div>
                 
-                <ProfileHome />
+                <ProfileHome buttonTypes={postButtons} />
             </section>
         </article>
 
