@@ -14,6 +14,11 @@
         align-items: center;
     }
     /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1300px) {
+        .feedFollowContainer{
+            height: 130px;
+        }
+    }
 /*  */
 
 
@@ -42,6 +47,24 @@
         font-style: normal;
     }
     /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1300px) {
+        .leftFC h2{
+            font-size: 24px;
+        }
+
+        .leftFC p{
+            font-size: 14px;
+        }
+    }
+    @media screen and (max-width: 1130px) {
+        .leftFC h2{
+            font-size: 20px;
+        }
+
+        .leftFC p{
+            font-size: 12px;
+        }
+    }
 /*   */
 
 
@@ -54,6 +77,9 @@
         font-size: 20px;
     }
     /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1300px) {
+        
+    }
 /*  */
 
 
@@ -81,4 +107,7 @@
         font-style: normal;
     }
     /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1300px) {
+        
+    }
 /*  */

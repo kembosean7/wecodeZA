@@ -1,6 +1,7 @@
 import React from 'react'
 import "./feed.css"
-import { buttonType, postData, feedFollowData } from './feedTestData'
+import { postData, feedFollowData } from './feedTestData'
+import { buttonTypes } from './buttonTypes';
 import Post from '../post/Post';
 import { CiHeart } from "react-icons/ci";
 import FeedFollow from '../feedFollow/FeedFollow';
@@ -21,7 +22,7 @@ function Feed({}) {
               <p>+</p>
 
               {
-                buttonType.map(x => {
+                buttonTypes.map(x => {
                   const {id, name} = x;
                   return <button key={id}>{name}</button>
                 })

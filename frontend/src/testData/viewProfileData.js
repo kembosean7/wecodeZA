@@ -1,4 +1,4 @@
-export const postData = [
+export const viewProfileData = [
     {
         id: 1,
         name: "Alexander I. Agu",
@@ -7,34 +7,14 @@ export const postData = [
     },
     {
         id: 2,
-        name: "Sean Kembo",
+        name: "Alexander I. Agu",
         title: "Why backend engineering is fun!",
         content: "Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you."
     },
     {
         id: 3,
-        name: "Tumi Mosia",
+        name: "Alexander I. Agu",
         title: "Best practices of JavaScript",
         content: "Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you."
-    },
-]
-
-
-export const feedFollowData = [
-    {
-        id: 1,
-        name: "Sean Kembo"
-    },
-    {
-        id: 2,
-        name: "Tumi Mosia"
-    },
-    {
-        id: 3,
-        name: "Tankiso Mofokeng"
-    },
-    {
-        id: 4,
-        name: "Moratoua"
     },
 ]
