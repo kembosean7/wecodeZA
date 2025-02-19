@@ -2,6 +2,7 @@ import React from 'react'
 import "./viewProfile.css"
 import { FaArrowLeft } from "react-icons/fa6";
 import ProfileHome from '../profileHome/ProfileHome';
+import ProfileAbout from '../profileAbout/ProfileAbout';
 
 function ViewProfile() {
   return (
