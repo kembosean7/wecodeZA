@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./viewProfile.css"
 import { FaArrowLeft } from "react-icons/fa6";
 import ProfileHome from '../profileHome/ProfileHome';
@@ -12,6 +12,14 @@ function ViewProfile() {
             icon: <CiHeart />
         }
     ]
+
+    const [viewerPage, setViewerPage] = useState(0);
+    let currentViewerPage = <ProfileHome buttonTypes={postButtons} />
+
+    // Navigating the Home and About sections
+    if (viewerPage === 0) currentViewerPage = <ProfileHome buttonTypes={postButtons} />;
+    else if( viewerPage === 1) currentViewerPage = <ProfileAbout />
+
   return (
     <main className='viewProfileMain'>
         <article className="viewProfileLeft">
@@ -28,16 +36,16 @@ function ViewProfile() {
 
             <section className='viewLeftBottom'>
                 <div className="viewNav">
-                    <button>
+                    <button onClick={()=> setViewerPage(0)}>
                         Home
                     </button>
 
-                    <button>
+                    <button onClick={()=> setViewerPage(1)}>
                         About
                     </button>
                 </div>
                 
-                <ProfileHome buttonTypes={postButtons} />
+                {currentViewerPage}
             </section>
         </article>
 

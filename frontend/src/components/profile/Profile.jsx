@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./profile.css"
 import { FaArrowLeft } from "react-icons/fa6";
 import ProfileHome from '../profileHome/ProfileHome';
 import { CiHeart } from "react-icons/ci";
 import { TfiWrite } from "react-icons/tfi";
 import { FaRegTrashAlt } from "react-icons/fa";
+import ProfileAbout from '../profileAbout/ProfileAbout';
 
 function Profile({}) {
     const postButtons = [
@@ -21,6 +22,12 @@ function Profile({}) {
             icon: <FaRegTrashAlt />
         }
     ]
+
+    const [userPage, setUserPage] = useState(0);
+    let currentPage = <ProfileHome buttonTypes={postButtons} />
+
+    if (userPage === 0) currentPage = <ProfileHome buttonTypes={postButtons} />
+    else if (userPage === 1) currentPage = <ProfileAbout />
   return (
     <main className='userProfileMain'>
         <article className='userProfileTop'>
@@ -43,15 +50,15 @@ function Profile({}) {
 
         <article className='userProfileBottom'>
             <div className="userProfileNav">
-                <button>
+                <button onClick={()=> setUserPage(0)}>
                     Home
                 </button>
 
-                <button>
+                <button onClick={()=> setUserPage(1)}>
                     About
                 </button>
             </div>
-            <ProfileHome buttonTypes={postButtons} />
+            {currentPage}
         </article>
     </main>
   )

@@ -7,6 +7,6 @@ import Profile from './components/profile/Profile'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Profile />
+    <ViewProfile />
   </StrictMode>,
 )
