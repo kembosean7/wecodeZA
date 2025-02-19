@@ -1,10 +1,13 @@
 import React from 'react'
 import "./feed.css"
-import { postData, feedFollowData } from './feedTestData'
+import { feedFollowData } from './feedTestData'
 import { buttonTypes } from './buttonTypes';
 import Post from '../post/Post';
 import { CiHeart } from "react-icons/ci";
 import FeedFollow from '../feedFollow/FeedFollow';
+import { Link } from 'react-router-dom';
+import { postData } from '../../testData/testData';
+import { users } from '../../testData/testData';
 
 function Feed({}) {
   // Makes sure post only has 1 button type -> like button
@@ -32,8 +35,12 @@ function Feed({}) {
             <section className='bottomFeed'>
               {
                 postData.map(x => {
-                  const {id, name, title, content} = x;
-                  return (<Post key={id} buttonTypes={postButtons} id={id} author={name} title={title} content={content} />)
+                  const {postId, name, title, content, topic} = x;
+                  return (
+                    <Link to={`/postHome/${postId}`} style={{color: "black", textDecoration: "none"}} >
+                      <Post key={postId} buttonTypes={postButtons} id={postId} author={name} title={title} content={content} />
+                    </Link>
+                  )
                 })
               }
             </section>
@@ -46,9 +53,9 @@ function Feed({}) {
 
             <section className='feedFollow'>
               {
-                feedFollowData.map(x => {
-                  const {id, name} = x;
-                  return <FeedFollow key={id} id={id} name={name} />
+                users.map(x => {
+                  const {userId, name} = x;
+                  return userId != 1? <FeedFollow key={userId} id={userId} name={name} /> : "";
                 })
               }
             </section>

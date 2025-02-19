@@ -1,29 +1,40 @@
 import React from 'react'
 import "./postHome.css"
 import { FaArrowLeft } from "react-icons/fa6";
+import { Link, useParams } from 'react-router-dom';
+import { getPostDataById } from '../../testData/testData';
+
+
 
 function PostHome() {
+    const params = useParams();
+    const postID = params.postId;
+
+    const getPostData = getPostDataById(Number(postID))
+    const {userId, postId, name, topic, title, content} = getPostData;
+
   return (
     <main className='postHomeContainer'>
-        <div className="postHomebackButton">
+        {/* <div className="postHomebackButton">
             <button>
                 <FaArrowLeft />
             </button>
-        </div>
+        </div> */}
 
         <article className='postHomeMain'>
-            <h2 className='postHomeName'>Alexander I. Agu</h2>
+            <Link to={`/viewAuthor/${userId}`} className='postHomeName' style={{color: "black", textDecoration: "none"}}>
+                {name}
+            </Link>
             <p>Student at WeThinkCode</p>
 
             <h2 className='postHomeTopic'>
-                WeThinkCode
+                {topic}
             </h2>
 
-            <h1 className='postHomeTitle'>How to pass the WeThinkCode bootcamp</h1>
+            <h1 className='postHomeTitle'>{title}</h1>
 
             <p>
-                Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you. Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you. Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you. Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you. Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you. Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you.
-                Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you. Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you. Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you. Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you. Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you. Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you.
+                {content}
             </p>
         </article>
     </main>

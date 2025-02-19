@@ -1,18 +1,18 @@
 import React from 'react'
 import "./profileAbout.css"
 
-function ProfileAbout() {
+function ProfileAbout({des, following, followers, dateJoined}) {
   return (
     <div className="profileAbout">
         <p>
-            Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you. Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you. Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you. Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you. Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you. Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you.
+          {des}
         </p>
 
-        <p>Memeber since 2003</p>
+        <p>Memeber since {dateJoined}</p>
 
         <div className="aboutBottom">
-            <p>25 Following</p>
-            <p>25K Followers</p>
+            <p>{following} Following</p>
+            <p>{followers} Followers</p>
         </div>
     </div>
   )

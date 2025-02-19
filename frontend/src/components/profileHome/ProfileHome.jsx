@@ -2,16 +2,22 @@ import React from 'react'
 import "./profileHome.css"
 import { viewProfileData } from '../../testData/viewProfileData'
 import Post from '../post/Post';
-
 import { buttonTypes } from '../feed/buttonTypes';
+import { getAllPostByUserId } from '../../testData/testData';
+import { Link } from 'react-router-dom';
 
-function ProfileHome({buttonTypes}) {
+function ProfileHome({buttonTypes, userId}) {
+  const getData = getAllPostByUserId(userId);
   return (
     <div className='profileHome'>
         {
-            viewProfileData.map(x => {
-                const {id, name, title, content} = x;
-                return <Post key={id} buttonTypes={buttonTypes} id={id} author={name} title={title} content={content} />
+            getData.map(x => {
+                  const {postId, name, title, content, topic} = x;
+                  return (
+                    <Link to={`/postHome/${postId}`} style={{color: "black", textDecoration: "none"}} >
+                      <Post key={postId} buttonTypes={buttonTypes} id={postId} author={name} title={title} content={content} />
+                    </Link>
+                  )
             })
         }
     </div>
