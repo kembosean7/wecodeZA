@@ -44,6 +44,15 @@ export const users = [
         followers: 0,
         dateJoined: 2000
     },
+    {
+        userId: 6,
+        name: "Thabo Mlilo",
+        miniDes: "I am a student at WeThinkCode and I am best at Backend",
+        mainDes: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse corporis assumenda hic dignissimos incidunt veniam itaque illum cupiditate magnam, velit, earum quidem magni sequi aperiam blanditiis aliquid obcaecati quibusdam sunt.",
+        following: 500000,
+        followers: 0,
+        dateJoined: 2000
+    },
 ]
 
 
@@ -137,13 +146,13 @@ export const postData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis tempora hic quam numquam ab, non voluptates laborum omnis ipsum quia, nihil voluptas, officia sapiente dolores iste. Cumque architecto omnis reiciendis?"
     },
     {
-        userId: 5,
+        userId: 6,
         name: "Thabo Mlilo",
         postId: 13,
         title: "Like really why do i love flutter",
         topic: "flutter",
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis tempora hic quam numquam ab, non voluptates laborum omnis ipsum quia, nihil voluptas, officia sapiente dolores iste. Cumque architecto omnis reiciendis?"
-    },
+    }
 ]
 
 export const getPostDataById = (postId)=> {
@@ -157,7 +166,7 @@ export const getPostDataById = (postId)=> {
 
 export const getAllPostByUserId = (userId)=> {
     const posts = []
-    for (let i=0; i <= users.length; i++){
+    for (let i=0; i < postData.length; i++){
         if (postData[i].userId === userId){
             posts.push(postData[i])
         }

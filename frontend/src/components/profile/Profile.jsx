@@ -6,6 +6,7 @@ import { CiHeart } from "react-icons/ci";
 import { TfiWrite } from "react-icons/tfi";
 import { FaRegTrashAlt } from "react-icons/fa";
 import ProfileAbout from '../profileAbout/ProfileAbout';
+import { getUserDataById } from '../../testData/testData';
 
 function Profile({}) {
     const postButtons = [
@@ -23,29 +24,32 @@ function Profile({}) {
         }
     ]
 
+    const getData = getUserDataById(1);
+    const {userId, name, miniDes, mainDes, following, followers, dateJoined} = getData;
+
     const [userPage, setUserPage] = useState(0);
-    let currentPage = <ProfileHome buttonTypes={postButtons} />
+    let currentPage = <ProfileHome buttonTypes={postButtons} userId={userId} />;
 
     // Navigates the Home and About sections
-    if (userPage === 0) currentPage = <ProfileHome buttonTypes={postButtons} />
-    else if (userPage === 1) currentPage = <ProfileAbout />
+    if (userPage === 0) currentPage = <ProfileHome buttonTypes={postButtons} userId={userId} />;
+    else if (userPage === 1) currentPage = <ProfileAbout des={mainDes} following={following} followers={followers} dateJoined={dateJoined} />
   return (
     <main className='userProfileMain'>
         <article className='userProfileTop'>
-            <div className="userBack">
+            {/* <div className="userBack">
                 <button>
                     <FaArrowLeft />
                 </button>
-            </div>
+            </div> */}
 
-            <h1 className='userName'>Alexander I. Agu</h1>
+            <h1 className='userName'>{name}</h1>
 
             <p className='userDes'>
-                Nobody knows how the selection process of WeThinkCode works but you can trust that we are here to help you.
+                {miniDes}
             </p>
 
             <p className='userFollowing'>
-                25 Following
+                {following} Following
             </p>
         </article>
 

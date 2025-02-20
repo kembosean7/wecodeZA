@@ -1,9 +1,10 @@
 import React from 'react'
 import "./feedFollow.css"
+import { Link } from 'react-router-dom'
 
-function FeedFollow({id, name}) {
+function FeedFollow({id, name, followers}) {
   return (
-    <div className="feedFollowContainer" key={id}>
+    <Link style={{color: "black", textDecoration: "none"}} to={`/viewAuthor/${id}`} className="feedFollowContainer" key={id}>
         <div className="leftFC">
             <h2>
                 {name}
@@ -12,11 +13,11 @@ function FeedFollow({id, name}) {
             
             <div className="fcFollowing">
                 <p>
-                    5 Posts
+                    2 Posts
                 </p>
 
                 <p>
-                    10K Followers
+                    {followers} Followers
                 </p>
             </div>
         </div>
@@ -26,7 +27,7 @@ function FeedFollow({id, name}) {
                 Follow
             </button>
         </div>
-    </div>
+    </Link>
   )
 }
 

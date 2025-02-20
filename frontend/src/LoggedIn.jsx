@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Feed from "./components/feed/Feed"
 import PostHome from './components/postHome/PostHome';
 import ViewProfile from './components/viewProfile/ViewProfile';
+import Profile from './components/profile/Profile';
 
 const router = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     {
         path: "/viewAuthor/:authorId",
         element: <ViewProfile />
+    },
+    {
+        path: "/viewProfile",
+        element: <Profile />
     }
 
 ]);

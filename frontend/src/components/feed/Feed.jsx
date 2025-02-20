@@ -35,7 +35,7 @@ function Feed({}) {
             <section className='bottomFeed'>
               {
                 postData.map(x => {
-                  const {postId, name, title, content, topic} = x;
+                  const {postId, name, title, content} = x;
                   return (
                     <Link to={`/postHome/${postId}`} style={{color: "black", textDecoration: "none"}} >
                       <Post key={postId} buttonTypes={postButtons} id={postId} author={name} title={title} content={content} />
@@ -54,8 +54,8 @@ function Feed({}) {
             <section className='feedFollow'>
               {
                 users.map(x => {
-                  const {userId, name} = x;
-                  return userId != 1? <FeedFollow key={userId} id={userId} name={name} /> : "";
+                  const {userId, name, followers, following} = x;
+                  return userId != 1? <FeedFollow key={userId} id={userId} name={name} followers={followers} /> : "";
                 })
               }
             </section>
