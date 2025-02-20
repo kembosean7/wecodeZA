@@ -1,5 +1,6 @@
 import React from 'react'
 import "./post.css"
+import { Link } from 'react-router-dom';
 
 
 function Post({buttonTypes, id, author, title, content}) {
@@ -17,22 +18,25 @@ function Post({buttonTypes, id, author, title, content}) {
             </p>
         </div>
 
-        <div className="feedPostContent">
-            <h1>
-                {title}
-            </h1>
+        <Link to={`/postHome/${id}`} style={{color: "black", textDecoration: "none"}} >
+            <div className="feedPostContent">
+                <h1>
+                    {title}
+                </h1>
 
-            <p>
-                {content}
-            </p>
-        </div>
+                <p>
+                    {content}
+                </p>
+            </div>
+        </Link>
 
-        <div className="feedPostInteractions">
-            {buttonTypes.map(x => {
-                const {id, icon} = x;
-                return <button key={id}> {icon} </button>
-            })}
-        </div>
+            <div className="feedPostInteractions">
+                {buttonTypes.map(x => {
+                    const {id, icon} = x;
+                    return <button key={id}> {icon} </button>
+                })}
+            </div>
+        
     </div>
   )
 }
