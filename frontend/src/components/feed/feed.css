@@ -18,10 +18,17 @@
 
 /* >>>>> LEFT SIDE OF FEED <<<<< */
     .feedLeft{
-        height: 100%;
+        height: 100vh;
         width: 80%;
         padding: 30px;
+
+        overflow: scroll;
     }
+
+    .feedLeft::-webkit-scrollbar{
+        display: none;
+    }
+
     /* >>> RESPONSIVE <<< */
     @media screen and (max-width: 950px) {
         .feedLeft{
