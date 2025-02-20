@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import "./write.css"
 import { FaArrowLeft } from "react-icons/fa6";
+import FeedHeader from '../feedHeader/FeedHeader';
 
 function Write() {
     const [title, setTitle] = useState("");
     const [topic, setTopic] = useState("");
     const [content, setContent] = useState("");
 
-  return (
+  return <>
+    <FeedHeader />
     <main className='writeMain'>
         <section className="writeButtons">
             <button className='postBackButton'>
@@ -29,7 +31,7 @@ function Write() {
             </p>
         </section>
     </main>
-  )
+  </>
 }
 
 export default Write

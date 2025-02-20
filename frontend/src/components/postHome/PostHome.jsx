@@ -3,6 +3,7 @@ import "./postHome.css"
 import { FaArrowLeft } from "react-icons/fa6";
 import { Link, useParams } from 'react-router-dom';
 import { getPostDataById } from '../../testData/testData';
+import FeedHeader from '../feedHeader/FeedHeader';
 
 
 
@@ -15,7 +16,8 @@ function PostHome() {
 
     // If i direct to my account it will take me to my profile page else to other Authores profiles
     const passCorrectUrl = userId === 1? `/viewProfile` : `/viewAuthor/${userId}`;
-  return (
+  return <>
+    <FeedHeader />
     <main className='postHomeContainer'>
         {/* <div className="postHomebackButton">
             <button>
@@ -40,7 +42,7 @@ function PostHome() {
             </p>
         </article>
     </main>
-  )
+  </>
 }
 
 export default PostHome

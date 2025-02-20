@@ -8,6 +8,7 @@ import FeedFollow from '../feedFollow/FeedFollow';
 import { Link } from 'react-router-dom';
 import { postData } from '../../testData/testData';
 import { users } from '../../testData/testData';
+import FeedHeader from '../feedHeader/FeedHeader';
 
 function Feed({}) {
   // Makes sure post only has 1 button type -> like button
@@ -18,7 +19,8 @@ function Feed({}) {
     }
   ]
 
-  return (
+  return <>
+    <FeedHeader />
     <main className='feedMain'>
         <article className='feedLeft'>
             <section className='topFeed'>
@@ -61,7 +63,7 @@ function Feed({}) {
             </section>
         </article>
     </main>
-  )
+  </>
 }
 
 export default Feed

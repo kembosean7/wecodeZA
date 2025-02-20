@@ -6,6 +6,7 @@ import ProfileAbout from '../profileAbout/ProfileAbout';
 import { CiHeart } from "react-icons/ci";
 import { useParams } from 'react-router-dom';
 import { getUserDataById } from '../../testData/testData';
+import FeedHeader from '../feedHeader/FeedHeader';
 
 function ViewProfile() {
     const postButtons = [
@@ -22,13 +23,14 @@ function ViewProfile() {
     const {userId, name, miniDes, mainDes, following, followers, dateJoined} = getData;
 
     const [viewerPage, setViewerPage] = useState(0);
-    let currentViewerPage = <ProfileHome buttonTypes={postButtons} />
+    let currentViewerPage;
 
     // Navigating the Home and About sections
     if (viewerPage === 0) currentViewerPage = <ProfileHome buttonTypes={postButtons} userId={userId} />;
     else if( viewerPage === 1) currentViewerPage = <ProfileAbout des={mainDes} following={following} followers={followers} dateJoined={dateJoined} />
 
-  return (
+  return <>
+    <FeedHeader />
     <main className='viewProfileMain'>
         <article className="viewProfileLeft">
             <section className='viewLeftTop'>
@@ -86,7 +88,7 @@ function ViewProfile() {
             </div>
         </article>
     </main>
-  )
+  </>
 }
 
 export default ViewProfile

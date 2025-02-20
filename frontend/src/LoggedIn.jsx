@@ -4,6 +4,7 @@ import Feed from "./components/feed/Feed"
 import PostHome from './components/postHome/PostHome';
 import ViewProfile from './components/viewProfile/ViewProfile';
 import Profile from './components/profile/Profile';
+import Write from './components/write/Write';
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,14 @@ const router = createBrowserRouter([
     {
         path: "/viewProfile",
         element: <Profile />
+    },
+    {
+        path: "/write",
+        element: <Write />
+    },
+    {
+        path: "/editPost/:postId",
+        element: <Write />
     }
 
 ]);

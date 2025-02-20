@@ -7,6 +7,7 @@ import { TfiWrite } from "react-icons/tfi";
 import { FaRegTrashAlt } from "react-icons/fa";
 import ProfileAbout from '../profileAbout/ProfileAbout';
 import { getUserDataById } from '../../testData/testData';
+import FeedHeader from '../feedHeader/FeedHeader';
 
 function Profile({}) {
     const postButtons = [
@@ -33,7 +34,9 @@ function Profile({}) {
     // Navigates the Home and About sections
     if (userPage === 0) currentPage = <ProfileHome buttonTypes={postButtons} userId={userId} />;
     else if (userPage === 1) currentPage = <ProfileAbout des={mainDes} following={following} followers={followers} dateJoined={dateJoined} />
-  return (
+
+  return <>
+    <FeedHeader />
     <main className='userProfileMain'>
         <article className='userProfileTop'>
             {/* <div className="userBack">
@@ -66,7 +69,7 @@ function Profile({}) {
             {currentPage}
         </article>
     </main>
-  )
+  </>
 }
 
 export default Profile
