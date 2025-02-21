@@ -1,300 +1,357 @@
-@import url('https://fonts.googleapis.com/css2?family=Bahianita&family=Belanosima:wght@400;600;700&family=Smooch+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap');
 
-/* >>>>> HERO CONTAINER <<<<< */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* >>>>> HERO CONTAINER SECTION <<< */
     .heroContainer{
-        height: 50vh;
+        height: 926px;
         width: 100%;
-
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-    }
-    /* >>> RESPONSIVE <<< */
-    @media screen and (max-width: 1400px) {
-        .heroContainer{
-            height: 70vh;
-            width: 100%;
-        }
-    }
-    @media screen and (max-width: 1200px) {
-        .heroContainer{
-            height: 70vh;
-            width: 100%;
-        }
-    }
-
-    @media screen and (max-width: 800px) {
-        .heroContainer{
-            height: 70vh;
-            width: 100%;
-        }
-    }
-
-    @media screen and (max-width: 700px) {
-        .heroContainer{
-            height: 70vh;
-            width: 100%;
-        }
-    }
-
-    @media screen and (max-width: 600px) {
-        .heroContainer{
-            height: 70vh;
-            width: 100%;
-        }
-    }
-
-    @media screen and (max-width: 450px) {
-        .heroContainer{
-            height: 50vh;
-            width: 100%;
-        }
-    }
-/*  */
-
-
-/* >>>>> RIGHT SECTION <<<<< */
-    .rightSection{
-        padding: 16px;
-        grid-row-start: 1;
-        grid-row-end: 6;
-        grid-column-start: 1;
-        grid-column-end: 4;
-        z-index: 1;
-        background-color: transparent;
 
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        gap: 2rem;
-    }
-
-    .toLogin{
-        height: 50px;
-        width: 100px;
-        padding: 8px;
-        
-        border: none;
-        outline: none;
-        background-color: #1746f0c9;
-
-        font-size: 18px;
-        font-family: "Smooch Sans", serif;
-        font-optical-sizing: auto;
-        font-weight: bold;
-        font-style: normal;
-
-        display: grid;
-        place-content: center;
-    }
-
-    /* >>> Hero Intro <<< */
-    .heroIntro{
-        font-family: "Smooch Sans", serif;
-        font-optical-sizing: auto;
-        /* font-weight: bolder; */
-        font-style: normal;
-    }
-
-    .heroIntro h1{
-        font-weight: bolder;
-        font-size: 2rem;
-    }
-
-    .heroIntro p{
-        font-size: 18px;
-        font-weight: 400;
+        align-items: center;
     }
     /* >>> RESPONSIVE <<< */
-    @media screen and (max-width: 1400px)
-    {
-        .rightSection{}
-        /* >> Hero Intro << */
-        .heroIntro h1{
-            font-size: 5rem;
-        }
-
-        .heroIntro p{
-            font-size: 30px;
-        }
-    }
-    
-    @media screen and (max-width: 1200px)
-    {
-        /* >> Hero Intro << */
-        .heroIntro h1{
-            font-size: 5rem;
-        }
-
-        .heroIntro p{
-            font-size: 30px;
-        }
-    }
-    
-    @media screen and (max-width: 1000px)
-    {
-        /* >> Hero Intro << */
-        .heroIntro h1{
-            font-size: 5rem;
-        }
-
-        .heroIntro p{
-            font-size: 30px;
-        }
-    }
-    
-    @media screen and (max-width: 900px)
-    {
-        /* >> Hero Intro << */
-        .heroIntro h1{
-            font-size: 5rem;
-        }
-
-        .heroIntro p{
-            font-size: 30px;
-        }
-    }
-    
-    @media screen and (max-width: 800px)
-    {
-        /* >> Hero Intro << */
-        .heroIntro h1{
-            font-size: 4rem;
-        }
-
-        .heroIntro p{
-            font-size: 20px;
-        }
-    }
-    
-    @media screen and (max-width: 700px)
-    {
-        /* >> Hero Intro << */
-        .heroIntro h1{
-            font-size: 4rem;
-        }
-
-        .heroIntro p{
-            font-size: 20px;
-        }
-    }
-    
-    @media screen and (max-width: 700px)
-    {
-        /* >> Hero Intro << */
-        .heroIntro h1{
-            font-size: 4rem;
-        }
-
-        .heroIntro p{
-            font-size: 20px;
-        }
-    }
-
-    @media screen and (max-width: 600px)
-    {
-        /* >> Hero Intro << */
-        .heroIntro h1{
-            font-size: 4rem;
-        }
-
-        .heroIntro p{
-            font-size: 20px;
-        }
-    }
-
-    @media screen and (max-width: 550px)
-    {
-        /* >> Hero Intro << */
-        .heroIntro h1{
-            font-size: 3rem;
-        }
-
-        .heroIntro p{
-            font-size: 20px;
-        }
-    }
-
-    @media screen and (max-width: 450px) {
-        /* >> Hero Intro << */
-        .heroIntro h1{
-            font-size: 2rem;
-        }
-
-        .heroIntro p{
-            font-size: 18px;
-            font-weight: 400;
+    @media screen and (max-width: 1183px) {
+        .heroContainer{
+            height: 726px;
         }
     }
 /*  */
 
 
-/* >>>>> LEFT SECTION <<<<< */
-    .leftSection{
-        grid-row-start: 1;
-        grid-row-end: 6;
-        grid-column-start: 3;
-        grid-column-end: 6;
-        /* background-color: #7094d1; */
+/* >>>>> TOP HERO CONTAINER <<<<< */
+    .topHero{
+        width: 97%;
+        height: 460px;
+        padding: 30px;
+        margin-top: 30px;
 
-        background-image: url('./background.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 350px;
+        background-color: #AAC4E7;
+        border-radius: 30px;
+    }
+
+    .topHero h2{
+        color: #021C8B;
+        font-size: 96px;
+        font-family: "Karantina", serif;
+        font-weight: bold;
+        font-style: normal;
     }
     /* >>> RESPONSIVE <<< */
-    @media screen and (max-width: 1400px) {
-        .leftSection {
-            background-size: 750px
+    @media screen and (max-width: 1370px) {
+        .topHero h2{
+            font-size: 86px;
         }
     }
 
-    @media screen and (max-width: 1200px) {
-        .leftSection {
-            background-size: 750px
+    @media screen and (max-width: 1183px) {
+        .topHero{
+            height: 330px;
+        }
+
+        .topHero h2{
+            font-size: 66px;
         }
     }
 
-    @media screen and (max-width: 1000px) {
-        .leftSection {
-            background-size: 650px
+    @media screen and (max-width: 970px) {
+        .topHero h2{
+            font-size: 56px;
         }
     }
 
-    @media screen and (max-width: 900px) {
-        .leftSection {
-            background-size: 650px
+    @media screen and (max-width: 770px) {
+        .topHero{
+            height: 250px;
+        }
+
+        .topHero h2{
+            font-size: 46px;
         }
     }
 
-    @media screen and (max-width: 800px) {
-        .leftSection {
-            background-size: 650px
+    @media screen and (max-width: 650px) {
+        .topHero{
+            height: 200px;
+        }
+
+        .topHero h2{
+            font-size: 36px;
         }
     }
 
-    @media screen and (max-width: 700px) {
-        .leftSection {
-            background-size: 650px
+    @media screen and (max-width: 530px) {
+        .topHero{
+            height: 150px;
+        }
+
+        .topHero h2{
+            font-size: 26px;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .topHero{
+            height: 130px;
+        }
+
+        .topHero h2{
+            font-size: 20px;
+        }
+    }
+/*  */
+
+
+/* >>>>> BOTTOM HERO CONTAINER <<<<< */
+    .bottomHero{
+        width: 1005;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1370px) {
+        .bottomHero{
+
+        }
+    }
+/*  */
+
+
+/* >>>>> HERO LINKS CONTAINER <<<<< */
+    .heroLinks{
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+    }
+
+    .heroLinks a{
+        width: 45%;
+        height: 99px;
+        margin-top: 30px;
+        padding: 30px;
+
+        outline: none;
+        border-radius: 30px;
+        text-decoration: none;
+
+        font-size: 64px;
+        font-family: "Karantina", serif;
+        font-weight: bold;
+        font-style: normal;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .heroPost{
+        border: 2px solid #021C8B;
+        background-color: transparent;
+        color: #021C8B;
+    }
+
+    .heroRead{
+        border: none;
+        background-color: #021C8B;
+        color: white;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1370px) {
+        .heroLinks button{
+            width: 558px;
         }
     }
 
-    @media screen and (max-width: 600px) {
-        .leftSection {
-            background-size: 500px
+    @media screen and (max-width: 1183px) {
+        .heroLinks{
+            justify-content: space-around;
+            gap: 0rem;
+        }
+
+        .heroLinks button{
+            width: 458px;
+            height: 88px;
+
+            font-size: 54px;
         }
     }
 
-    @media screen and (max-width: 550px) {
-        .leftSection {
-            background-size: 450px
+    @media screen and (max-width: 970px) {
+        .heroLinks button{
+            width: 358px;
+            height: 68px;
+
+            font-size: 44px;
         }
     }
 
-    @media screen and (max-width: 450px) {
-        .leftSection{
-            background-size: 350px
+    @media screen and (max-width: 770px) {
+        .heroLinks button{
+            width: 258px;
+            height: 58px;
+
+            font-size: 34px;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        .heroLinks{
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .heroLinks button{
+            width: 90%;
+            height: 58px;
+
+            font-size: 34px;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .heroLinks{
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .heroLinks button{
+            width: 90%;
+            height: 58px;
+
+            font-size: 34px;
+        }
+
+        .heroPost{
+
+        }
+
+        .heroRead{
+
+        }
+    }
+/*  */
+
+
+/* >>>>> HERO DETAILS SECTION <<<<< */
+    .heroDetails{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heroHeader{
+        width: 90%;
+        margin-top: 30px;
+
+        text-align: center;
+        color: #021C8B;
+        font-size: 48px;
+        font-family: "Karantina", serif;
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    .hDetails{
+        width: 100%;
+        margin-top: 30px;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .hDetails p{
+        width: 482px;
+
+        text-align: center;
+
+        font-family: "Karla", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1183px) {
+        .heroDetails{
+
+        }
+
+        .heroDetails h2{
+            width: 95%;
+
+            font-size: 38px;
+        }
+
+        .hDetails{
+
+        }
+
+        .hDetails p{
+            width: 40%;
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (max-width: 770px) {
+        .heroDetails h2{
+            width: 95%;
+
+            font-size: 28px;
+        }
+
+        .hDetails p{
+            width: 40%;
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        .heroDetails{
+
+        }
+
+        .heroDetails h2{
+            width: 85%;
+
+            font-size: 20px;
+        }
+
+        .hDetails{
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .hDetails p{
+            width: 80%;
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .heroDetails{
+
+        }
+
+        .heroDetails h2{
+            width: 85%;
+
+            font-size: 20px;
+        }
+
+        .hDetails{
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .hDetails p{
+            width: 80%;
+            font-size: 12px;
         }
     }
 /*  */

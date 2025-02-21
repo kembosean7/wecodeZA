@@ -4,15 +4,22 @@ import './feature.css'
 function Feature() {
   return (
     <div className="featureContainer">
-        <h1>1</h1>
+        <div className="featureName">
+          <div className="nameDate">
+            <h2>
+              Alexander I. Agu
+            </h2>
 
-        <div className="featureDes">
-            <h2>Tech News</h2>
+            <p>25 November 2025</p>
+          </div>
 
-            <p>
-                Updates on the latest trends and innovations shaping the global and South African tech landscape.
-            </p>
+          <p>Software Engineer</p>
         </div>
+
+        <p className='featurePost'>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
     </div>
   )
 }

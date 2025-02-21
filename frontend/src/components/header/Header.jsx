@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className='header'>
         <div className="logo">
-            <h2>wecodeZA</h2>
+            <a href='#'>WeCodeZA</a>
         </div>
 
         <nav className='navbar'>
@@ -21,16 +21,16 @@ function Header() {
                     <IoMdClose />
                 </label>
 
-                <li className='navItem'>
-                    <a href="#" className='navLink'>Home</a>
+                <li className='navItem navHome'>
+                    <a href="/" className='navLink'>Home</a>
                 </li>
 
                 <li className='navItem'>
-                    <a href="#" className='navLink'>Login</a>
+                    <a href="/login" className='navLink'>Login</a>
                 </li>
 
                 <li className='navItem'>
-                    <a href="#" className='navLink'>Sign Up</a>
+                    <a href="/signup" className='navLink'>Sign Up</a>
                 </li>
 
             </ul>

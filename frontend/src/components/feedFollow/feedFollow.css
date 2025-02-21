@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+/* >>>>> FEED FOLLOW CONTAINER <<<<< */
+    .feedFollowContainer{
+        width: 100%;
+        height: 182px;
+
+        border-bottom: 1px solid black;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1300px) {
+        .feedFollowContainer{
+            height: 130px;
+        }
+    }
+/*  */
+
+
+/* >>>>> LEFT FC -> FOLLOW CONTAINER <<<<< */
+    .leftFC{
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .leftFC h2{
+        font-size: 32px;
+        font-family: "League Gothic", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+        "wdth" 100;
+    }
+
+    .leftFC p{
+        font-family: "Kulim Park", serif;
+        font-weight: 200;
+        font-style: normal;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1300px) {
+        .leftFC h2{
+            font-size: 24px;
+        }
+
+        .leftFC p{
+            font-size: 14px;
+        }
+    }
+    @media screen and (max-width: 1130px) {
+        .leftFC h2{
+            font-size: 20px;
+        }
+
+        .leftFC p{
+            font-size: 12px;
+        }
+    }
+/*   */
+
+
+/* >>>>> FC -> FEED CONTAINER FOLLOWING */
+    .fcFollowing{
+        margin-top: 20px;
+        display: flex;
+        gap: 1rem;
+
+        font-size: 20px;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1300px) {
+        
+    }
+/*  */
+
+
+/* >>>>> RIGHT FC -> FOLLOWING CONTAINER <<<<< */
+    .rightFC{
+        height: 100%;
+
+        display: grid;
+        place-content: center;
+    }
+
+    .rightFC button{
+        width: 64px;
+        height: 32px;
+
+        border: none;
+        outline: none;
+
+        border-radius: 30px;
+        color: white;
+        background-color: #021C8B;
+
+        font-family: "Kulim Park", serif;
+        font-weight: 200;
+        font-style: normal;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 1300px) {
+        
+    }
+/*  */

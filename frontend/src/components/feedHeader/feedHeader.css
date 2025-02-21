@@ -1,41 +1,151 @@
-@import url('https://fonts.googleapis.com/css2?family=Bahianita&family=Belanosima:wght@400;600;700&family=Smooch+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
 
-
-/* >>>>> FEED HEADER CONTAINER <<<<< */
+/* >>>>> FEED HEADER <<<<< */
     .feedHeader{
+        background-color: white;
         width: 100%;
-        height: 75px;
-        padding: 30px;
-
-        border-bottom: 2px solid rgba(128, 128, 128, 0.219);
+        height: 130px;
+        padding: 20px;
 
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        font-size: 18px;
-        font-family: "Smooch Sans", serif;
-        font-optical-sizing: auto;
-        font-weight: bold;
-        font-style: normal;
     }
 
-    .feedHeader h2{
+    .feedMenu{
         font-size: 2rem;
+    }
+    #feedSidebar{
+        display: none;
     }
     /* >>> RESPONSIVE <<< */
 /*  */
 
 
-/* >>>>> ACCOUNT NAVIGATION SECTION <<<<< */
-    .accountNav{
-        height: 100%;
-        
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+/* >>>>> FEED NAVBAR <<<<< */
+    .feedNavbar{
+        width: 350px;
+        height: 100vh;
+        padding: 20px;
 
+        background-color: #021C8B;
+        color: white;
+
+        position: fixed;
+        top: 0;
+        left: -350px;
+        z-index: 2;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    #feedSidebar:checked ~ .feedNavbar{
+        left: 0;
+        transition: 350ms;
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */
+
+/* >>>>> NAV TOP <<<<< */
+    .navTop{
+        width: 100%;
+        list-style: none;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .feedClose{
+        width: 100%;
+        
+        display: grid;
+        place-content: center;
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */
+
+
+/* >>>>> FEED NAV ITEM <<<<< */
+    .feedNavItem{
+        font-size: 1.5rem;
+        font-family: "League Gothic", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+
+        display: flex;
         gap: 2rem;
     }
     /* >>> RESPONSIVE <<< */
+/*  */
+
+
+/* >>>>> NAV BOTTOM <<<<< */
+    .navBottom{
+        list-style: none;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */
+
+
+/* >>>>> LOGO <<<<< */
+    .logo{
+        margin: 0 auto;
+
+        font-size: 3rem;
+        font-family: "League Gothic", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 450px) {
+        .logo{
+            font-size: 2rem
+        }
+    }
+/*  */
+
+
+/* >>>>> PAGE NAV <<<<<< */
+    .pageNav{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .feedDirection{
+        width: 45px;
+        height: 45px;
+
+        background-color: #021C8B;
+        border-radius: 50%;
+
+        display: grid;
+        place-content: center;
+    }
+
+    .pageNavLinks{
+        font-size: 1.6rem;
+        margin: 0 auto;
+        color: white;
+    }
+    /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 450px) {
+        .pageNav{
+            display: none;
+        }
+    }
 /*  */

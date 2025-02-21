@@ -1,0 +1,12 @@
+/* >>>>> PROFILE HOME CONTAINER <<<<< */
+    .profileHome{
+        width: 100%;
+
+        /* background-color: antiquewhite; */
+
+        display: grid;
+        place-content: center;
+        place-items: center;
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */

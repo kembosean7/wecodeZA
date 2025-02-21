@@ -1,65 +1,69 @@
 import React from 'react'
 import "./feed.css"
-import Post from '../post/FeedPost'
-import { CiSearch } from "react-icons/ci";
-import FeedPost from '../post/FeedPost';
-import Follow from '../follow/Follow';
+import { feedFollowData } from './feedTestData'
+import { buttonTypes } from './buttonTypes';
+import Post from '../post/Post';
+import { CiHeart } from "react-icons/ci";
+import FeedFollow from '../feedFollow/FeedFollow';
+import { Link } from 'react-router-dom';
+import { postData } from '../../testData/testData';
+import { users } from '../../testData/testData';
+import FeedHeader from '../feedHeader/FeedHeader';
 
-function Feed() {
-  return (
-    <main className='feedContainer'>
-        <section className="leftFeed">
+function Feed({}) {
+  // Makes sure post only has 1 button type -> like button
+  const postButtons = [
+    {
+      id: "l",
+      icon: <CiHeart />
+    }
+  ]
 
-          <div className="feedTopHeader">
+  return <>
+    <FeedHeader />
+    <main className='feedMain'>
+        <article className='feedLeft'>
+            <section className='topFeed'>
+              <p>+</p>
 
-            <div className="feedSearch">
-              <div className="search">
-                <button>
-                  <CiSearch />
-                </button>
+              {
+                buttonTypes.map(x => {
+                  const {id, name} = x;
+                  return <button key={id}>{name}</button>
+                })
+              }
+            </section>
 
-                <input type="text" placeholder='How to get into wethinkcode' />
-              </div>
+            <section className='bottomFeed'>
+              {
+                postData.map(x => {
+                  const {postId, name, title, content} = x;
+                  return (
+                    
+                      <Post key={postId} buttonTypes={postButtons} id={postId} author={name} title={title} content={content} />
+                    
+                  )
+                })
+              }
+            </section>
+        </article>
 
-              <div className="filter">
-                <p>My Topics:</p>
+        <article className='rightFeed'>
+            <h2 className='fh'>
+                Follow new Author's
+            </h2>
 
-                <p className='feedTopics'>Game Dev</p>
-                <p className='feedTopics'>Game Dev</p>
-                <p className='feedTopics'>Game Dev</p>
-                <p className='feedTopics'>Game Dev</p>
-                <p className='feedTopics'>Coding stuff</p>
-              </div>
-            </div>
-
-            <h2 className='head'>Articles</h2>
-
-          </div>
-
-          <div className="posts">
-            <FeedPost />
-            <FeedPost />
-            <FeedPost />
-            <FeedPost />
-          </div>
-        </section>
-
-        <section className="rightFeed">
-          <h2>People you might be intrested in:</h2>
-
-          <div className="feedFollows">
-            <Follow />
-            <Follow />
-            <Follow />
-            <Follow />
-            <Follow />
-            <Follow />
-            <Follow />
-            <Follow />
-          </div>
-        </section>
+            <section className='feedFollow'>
+              {
+                users.map(x => {
+                  const {userId, name, followers, following} = x;
+                  return userId != 1? <FeedFollow key={userId} id={userId} name={name} followers={followers} /> : "";
+                })
+              }
+            </section>
+        </article>
     </main>
-  )
+  </>
 }
 
 export default Feed

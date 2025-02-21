@@ -1,22 +1,20 @@
 import React from 'react'
 import "./about.css"
 import Feature from '../feature/Feature'
+import HashTag from './HashTag'
 
 function About() {
   return (
     <article className='aboutContainer'>
-        <div className="aboutRightS">
-            <h2>
-                Features
-            </h2>
-
-            <p>
-                WeCodeZA is a vibrant and inclusive blogsite dedicated to empowering and inspiring South Africa's tech community. From beginner coders to seasoned developers, WeCodeZA offers a space to share ideas, learn, and grow
-            </p>
+        <div className="aboutTags">
+            <HashTag one={"#Prompt_Engineering"} two={""} />
+            <HashTag one={"#Coding"} two={"#ChatGPT"} />
+            <HashTag one={"#Loops"} two={"#DeepSeek"} />
+            <HashTag one={"#Best_Practices"} two={""} />
         </div>
 
-        <div className="aboutLeftS">
-            {<Feature />}
+        <div className="aboutF">
+            <Feature />
         </div>
     </article>
   )
