@@ -33,7 +33,7 @@ public class SecurityConfig  {
             public void addCorsMappings(CorsRegistry registry) {
                 // Apply CORS to all endpoints
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:3000") // Frontend URL
+                        .allowedOrigins("http://localhost:5173") // Frontend URL
                         .allowedMethods("GET", "POST", "PUT", "DELETE") // Allowed HTTP methods
                         .allowedHeaders("*") // Allow all headers
                         .allowCredentials(true); // Allow credentials (cookies)
