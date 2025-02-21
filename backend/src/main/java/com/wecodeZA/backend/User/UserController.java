@@ -19,7 +19,6 @@ public class UserController {
     @GetMapping("/users")
     public List<User> getUsers(){
         return useService.getUsers();
-
     }
 
     @GetMapping(path = "/users/{id}")
@@ -49,7 +48,6 @@ public class UserController {
     public ResponseEntity<String> deleteUser(@PathVariable("id") Long id){
         useService.deleteUser(id);
         return ResponseEntity.ok("User successfully deleted");
-
     }
 
     @PutMapping(path = "/users/{id}")
