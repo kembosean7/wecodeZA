@@ -19,7 +19,7 @@ public class PostController {
     private final PostService postService;
 
 
-    @GetMapping("/posts")
+    @GetMapping()
     public List<Post> getAllPosts(){
         return  postService.getAllPost();
     }
