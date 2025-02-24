@@ -18,17 +18,17 @@ public class PostService {
     private final PostRepository postRepository;
     private final UserRepository userRepository;
 
-    //Method that retrives post by its ID, throws IllegalStateException if the post with the given ID is not found
+    //Method to retrieves post by its ID, throws IllegalStateException if the post with the given ID is not found
     public Post getPostbyId(Long postId){
         return postRepository.findById(postId).orElseThrow(() -> new IllegalStateException("Post with ID " + postId + " not found"));
     }
 
-    //Method that retrives list of all posts
+    //Method that retrieves list of all posts
     public List<Post> getAllPost(){
         return postRepository.findAll();
     }
 
-    //Method that retrives post by user ID, throws IllegalStateException if the post with the given ID is not found
+    //Method to retrieves post by user ID, throws IllegalStateException if the post with the given ID is not found
     public List<Post> getPostsByUserId(Long userId) {
         List<Post> post = postRepository.findByUserId(userId);
         if (post.isEmpty()) {
@@ -36,6 +36,8 @@ public class PostService {
         }
         return post;
     }
+
+    //Method to deletes post by ID, throws IllegalStateException if the post with the given ID is not found
     public void deletePost(Long postId) {
 
         boolean exist = postRepository.existsById(postId);
@@ -46,6 +48,7 @@ public class PostService {
         postRepository.deleteById(postId);
     }
 
+    //Method to create new post and save it to database, throws IllegalStateException if the post with the given user ID is not found
     public Post createPost(Long userId, String title, String topic, String context) {
 
         User user = userRepository.findById(userId)
