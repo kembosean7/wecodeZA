@@ -18,18 +18,17 @@ public class PostService {
     private final PostRepository postRepository;
     private final UserRepository userRepository;
 
-    public void savePost(Post post){
-        postRepository.save(post);
-    }
-
+    //Method that retrives post by its ID, throws IllegalStateException if the post with the given ID is not found
     public Post getPostbyId(Long postId){
         return postRepository.findById(postId).orElseThrow(() -> new IllegalStateException("Post with ID " + postId + " not found"));
     }
 
+    //Method that retrives list of all posts
     public List<Post> getAllPost(){
         return postRepository.findAll();
     }
 
+    //Method that retrives post by user ID, throws IllegalStateException if the post with the given ID is not found
     public List<Post> getPostsByUserId(Long userId) {
         List<Post> post = postRepository.findByUserId(userId);
         if (post.isEmpty()) {
