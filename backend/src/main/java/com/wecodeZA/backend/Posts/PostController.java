@@ -1,6 +1,7 @@
 package com.wecodeZA.backend.Posts;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.method.P;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,15 +35,12 @@ public class PostController {
     }
 
     @PostMapping("posts/creatpost")
-    public Post createPost(@RequestBody Post post) {
-        return postService.createPost(post.getId(), post.getTitle(), post.getTopic(), post.getContext());
+    public ResponseEntity<String> createPost(@RequestBody Post post) {
+        postService.createPost(post.getId(), post.getTitle(), post.getTopic(), post.getContext());
+        return ResponseEntity.ok("Post successfully posted");
     }
 
 
-    @DeleteMapping(path = "posts/{id}")
-    public void deleteUser(@PathVariable("id") Long id){
-        postService.deletePost(id);
-    }
 
 
 
