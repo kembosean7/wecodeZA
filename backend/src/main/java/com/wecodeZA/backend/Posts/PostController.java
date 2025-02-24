@@ -30,13 +30,14 @@ public class PostController {
         return postService.getPostbyId(id);
     }
 
-    //Route to retrieve post by user id
+    //Route to retrieve post by user id from database
     @GetMapping("user/{userId}")
     public List<Post> getPostByUserId(@PathVariable Long userId){
         return postService.getPostsByUserId(userId);
     }
 
-    @PostMapping("posts/creatpost")
+    //Route to create new post and save it to database
+    @PostMapping("creatpost")
     public ResponseEntity<String> createPost(@RequestBody Post post) {
         postService.createPost(post.getId(), post.getTitle(), post.getTopic(), post.getContext());
         return ResponseEntity.ok("Post successfully posted");
