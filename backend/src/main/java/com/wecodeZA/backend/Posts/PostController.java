@@ -44,7 +44,7 @@ public class PostController {
     }
 
     //Route to delete post by user id
-    @DeleteMapping(path = "posts/{id}")
+    @DeleteMapping(path = "{id}")
     public ResponseEntity<String> deleteUser(@PathVariable("id") Long id){
         postService.deletePost(id);
         return ResponseEntity.ok("Post successfully deleted");
