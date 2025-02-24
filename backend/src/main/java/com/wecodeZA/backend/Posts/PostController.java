@@ -18,13 +18,14 @@ public class PostController {
     @Autowired
     private final PostService postService;
 
-
+    //Route to retrieve all post from database
     @GetMapping()
     public List<Post> getAllPosts(){
         return  postService.getAllPost();
     }
 
-    @GetMapping("/posts/{id}")
+    //Route to retrieve post by id from database
+    @GetMapping("{id}")
     public Post getPostById(@PathVariable Long id){
         return postService.getPostbyId(id);
     }
