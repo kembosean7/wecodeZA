@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/wecode")
+@RequestMapping(path = "api/wecode/posts")
 public class PostController {
 
     public PostController(PostService postService) {
