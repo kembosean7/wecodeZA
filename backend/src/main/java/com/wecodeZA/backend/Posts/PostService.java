@@ -52,7 +52,20 @@ public class PostService {
     public Post createPost(Long userId, String title, String topic, String context) {
 
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new IllegalStateException("User not found"));
+                .orElseThrow(() -> new IllegalStateException("User with ID " + userId + " not found"));
+
+        if(title.trim().isEmpty()){
+            throw new IllegalStateException("Title cannot be empty");
+        }
+
+        if(topic.trim().isEmpty()){
+            throw new IllegalStateException("Topic cannot be empty");
+        }
+
+        if(context.trim().isEmpty()){
+            throw new IllegalStateException("Context body cannot be empty");
+        }
+
 
 
         Post post = new Post(user, title, topic, context);
