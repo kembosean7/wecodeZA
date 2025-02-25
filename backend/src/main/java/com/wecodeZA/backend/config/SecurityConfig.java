@@ -18,7 +18,7 @@ public class SecurityConfig  {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity.csrf(AbstractHttpConfigurer::disable) // Disable CSRF (adjust if needed)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/health", "/api/v1/user/new").permitAll() // Public endpoints
+                        .requestMatchers("api/v1/user/new").permitAll() // Public endpoints
                         .requestMatchers("/**").permitAll()) // Allow all other endpoints (consider changing to .authenticated() for security)
                 .httpBasic(Customizer.withDefaults()) // Basic HTTP authentication
                 .cors(Customizer.withDefaults()) // Enable CORS in Spring Security

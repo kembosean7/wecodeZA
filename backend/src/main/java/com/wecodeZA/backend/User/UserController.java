@@ -36,7 +36,7 @@ public class UserController {
         return ResponseEntity.ok("Sign up successful");
     }
 
-    //Route to login user, validates the user credentials
+    //Route to sign in user, validates the user credentials
     @PostMapping("login")
     public ResponseEntity<String> login(@RequestBody User user){
         boolean isValid = useService.validateLogin(user.getUsername(), user.getPassword());
@@ -56,7 +56,7 @@ public class UserController {
         return ResponseEntity.ok("User successfully deleted");
     }
 
-    //Route to update user details and save to databse
+    //Route to update user details and save to database
     @PutMapping(path = "{id}")
     public ResponseEntity<String> updateUser(
             @PathVariable("id") Long id,
