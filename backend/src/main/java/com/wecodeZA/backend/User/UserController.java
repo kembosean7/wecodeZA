@@ -23,12 +23,14 @@ public class UserController {
         return useService.getUsers();
     }
 
+    //Route to get user from database
     @GetMapping(path = "{id}")
     public User getUserById(@PathVariable("id")Long id){
         return useService.getUserById(id);
     }
 
-    @PostMapping("users/signup")
+    //Route to sign up new user and save to database
+    @PostMapping("signup")
     public ResponseEntity<String> signupUser(@RequestBody User user){
         useService.addNewUser(user);
         return ResponseEntity.ok("Sign up successful");
