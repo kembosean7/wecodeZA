@@ -36,7 +36,8 @@ public class UserController {
         return ResponseEntity.ok("Sign up successful");
     }
 
-    @PostMapping("users/login")
+    //Route to login user, validates the credentials
+    @PostMapping("login")
     public ResponseEntity<String> login(@RequestBody User user){
         boolean isValid = useService.validateLogin(user.getUsername(), user.getPassword());
 
