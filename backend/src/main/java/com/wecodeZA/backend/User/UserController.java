@@ -17,12 +17,13 @@ public class UserController {
 
     private final UserService useService;
 
-    @GetMapping("/users")
+    //Route to get a list of all users from database
+    @GetMapping()
     public List<User> getUsers(){
         return useService.getUsers();
     }
 
-    @GetMapping(path = "/users/{id}")
+    @GetMapping(path = "{id}")
     public User getUserById(@PathVariable("id")Long id){
         return useService.getUserById(id);
     }
