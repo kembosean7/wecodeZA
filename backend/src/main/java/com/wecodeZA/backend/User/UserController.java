@@ -56,7 +56,8 @@ public class UserController {
         return ResponseEntity.ok("User successfully deleted");
     }
 
-    @PutMapping(path = "/users/{id}")
+    //Route to update user details and save to databse
+    @PutMapping(path = "{id}")
     public ResponseEntity<String> updateUser(
             @PathVariable("id") Long id,
             @RequestParam(required = false) String name,
