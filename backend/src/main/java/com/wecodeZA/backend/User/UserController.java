@@ -8,7 +8,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
-@RequestMapping(path = "api/wecode")
+@RequestMapping(path = "api/wecode/users")
 public class UserController {
 
     public UserController(UserService useService) {
@@ -35,7 +35,7 @@ public class UserController {
 
     @PostMapping("users/login")
     public ResponseEntity<String> login(@RequestBody User user){
-        boolean isValid = useService.validateUser(user.getUsername(), user.getPassword());
+        boolean isValid = useService.validateLogin(user.getUsername(), user.getPassword());
 
         if(isValid){
             return ResponseEntity.ok("Login successful");
