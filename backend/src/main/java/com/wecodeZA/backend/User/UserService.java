@@ -21,10 +21,12 @@ public class UserService {
         passwordEncoder = new BCryptPasswordEncoder();
     }
 
+    //Method to get a list of all users in the database
     public List<User> getUsers() {
         return  userRepository.findAll();
     }
 
+    //Method to add new user to database, validating fields before adding
     public void addNewUser(User user) {
 
         String email = user.getEmail();
@@ -72,6 +74,7 @@ public class UserService {
 
         userRepository.save(user);
     }
+    //Validating user password
     private void validatePassword(String password){
         if (password.length() < 8){
             throw new IllegalArgumentException("Password must be at least 8 characters long");
@@ -86,7 +89,7 @@ public class UserService {
         }
     }
 
-
+    //Method to delete user from database
     public void deleteUser(Long id) {
 
         boolean exist = userRepository.existsById(id);
@@ -97,6 +100,7 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
+    //Method to update user details, validating the fields before updating
     @Transactional
     public void updateUser(Long id, String name, String lastname, String email, String username, String profession, String bio) {
         User user = userRepository.findById(id).orElseThrow(() -> new IllegalStateException("Account with ID: " + id + " does not exist"));
@@ -128,7 +132,9 @@ public class UserService {
         }
         userRepository.save(user);
     }
-    public boolean validateUser(String username, String rawPassword){
+
+    //Validating login
+    public boolean validateLogin(String username, String rawPassword){
         Optional<User> optionalUser = userRepository.findUserByUsername(username);
 
         if(optionalUser.isPresent()){
@@ -140,6 +146,7 @@ public class UserService {
         }
     }
 
+    //Method to get user by ID
     public User getUserById(Long id) {
         return userRepository.findById(id).orElseThrow(() -> new IllegalStateException("User with ID " + id + " not found"));
     }
